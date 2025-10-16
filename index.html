@@ -2,95 +2,263 @@
 <html lang="pt-BR">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Meta | Ray-Ban</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mercadótica | RayBan Meta</title>
   <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="https://static.xx.fbcdn.net/rsrc.php/yo/r/iRmz9lCMBD2.ico">
 </head>
 
 <body>
 
-  <!-- Cabeçalho -->
+  <!-- NAVBAR -->
   <header class="navbar">
-    <div class="logo">
-      <img src="mercadotica.png" alt="Mercadotica Logo">
-    </div>
+    <div class="logo"><img src="mercadotica.png" alt="Logo"></div>
     <nav>
       <ul>
-      <!-- <li><a href="#">AI Glasses</a></li> -->
-        <!--<li><a href="#">Meta Quest</a></li>-->
-      <!-- <li><a href="#">Apps e Jogos</a></li>-->
-      <li><a href="#">Explorar a Meta</a></li> 
-        <li><a href="#">Suporte</a></li>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#quality">Qualidade</a></li>
+        <li><a href="#battery">Bateria</a></li>
+        <li><a href="#music">Áudio</a></li>
+        <li><a href="#share">Compartilhar</a></li>
+        <li><a href="#models">Modelo</a></li>
+        <li><a href="#ai">Meta AI</a></li>
+        <li><a href="#control">Controle</a></li>
+        <li><a href="#buy">Comprar</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Seção de abertura com vídeo raybanMeta -->
-  <section class="hero">
-    <video autoplay muted loop playsinline class="background-video">
-      <source src="introducao.mp4" type="video/mp4" />
-    </video>
-
-    <div class="overlay"></div>
-
-    <div class="hero-content">
-      <div class="hero-logos">
-        <source src="logoRayBan.png" alt="Ray-Ban Logo">
-      <!-- <span class="divider">|</span>-->
-        <source src="logoMeta.png" alt="Mer logo">
+  <main>
+    <!-- HERO / vídeo de abertura -->
+    <section class="hero" id="hero">
+      <video autoplay muted loop playsinline src="VideoRayBanGen2.mp4"></video>
+      <div class="inner">
+        <div class="brand-logos">
+          <img src="assets/logo-rayban.png" alt="Ray-Ban">
+          <img src "assets/logo-meta.png" alt="Meta">
+        </div>
+        <h1>Conheça o Ray-Ban Meta</h1>
+        <div class="btn-group">
+          <a class="btn primary" href="#quality">Saiba mais</a>
+          <a class="btn ghost" href="#buy">Comprar</a>
+        </div>
       </div>
-      <h1>Conheça o novo Ray-Ban Meta</h1>
-      <p>Conheça os AI glasses campeões de venda, agora com mais cores e novas tecnologias que você vai amar.</p>
+    </section>
 
-      <div class="buttons">
-        <a href="#" class="btn primary">Saiba mais</a>
-        <a href="#" class="btn secondary">Comprar o Ray-Ban Meta</a>
+    <!-- Qualidade / 3K, Estabilização, Câmera lenta -->
+<section id="quality" class="container">
+  <div class="fade-up" data-fade>
+    <h2>Capture vídeos com qualidade superior</h2>
+    <p class="lead">
+      Com a nova resolução <strong>3K Ultra HD</strong> e uma câmera ultra-wide de 12 MP, seus vídeos
+      ganham nitidez e riqueza de detalhes para você reviver todos os seus momentos especiais.
+    </p>
+  </div>
+
+  <div class="quality-grid">
+    <!-- Vídeo 3K Ultra HD (grande) -->
+    <div class="quality-card large fade-up" data-fade>
+      <video autoplay muted loop playsinline src="video2.mp4" poster="assets/video2-poster.jpg"></video>
+      <div class="overlay">
+        <h3>3K Ultra HD</h3>
       </div>
     </div>
-  </section>
 
-  <!-- Seção sobre -->
-  <section class="about">
-    <div class="container">
-      <h2>Experimente o futuro da tecnologia vestível</h2>
-      <p>Com Ray-Ban Meta, você grava momentos, ouve música e se conecta com o mundo sem precisar de um celular nas
-        mãos. Uma fusão perfeita de estilo e inovação.</p>
+    <div class="quality-bottom">
+      <!-- Estabilização -->
+      <div class="quality-card small fade-up" data-fade>
+        <video autoplay muted loop playsinline src="videoEstabilização.mp4"
+          poster="assets/demo-stab-poster.jpg"></video>
+        <div class="overlay">
+          <h3>Estabilização</h3>
+        </div>
+      </div>
+
+      <!-- Câmera lenta -->
+      <div class="quality-card small fade-up" data-fade>
+        <video autoplay muted loop playsinline src="video3.mp4" poster="assets/demo-slowmo-poster.jpg"></video>
+        <div class="overlay">
+          <h3>Câmera lenta</h3>
+        </div>
+      </div>
     </div>
-  </section>
-
-  <!-- Seção extra -->
-<section class="hero second">
-  <div class="hero-overlay">
-    <h3>Ray-Ban Meta Wayfarer</h3>
-    <h1>De olho no futuro</h1>
-    <p>Design icônico com tecnologia de ponta.</p>
-    <a href="#" class="hero-btn">Saiba mais</a>
   </div>
 </section>
 
-  <!-- <section class="products">
-    <div class="container">
-      <div class="product-card">
-        <img src="metaWayfarer.png" alt="Óculos 1">
-        <h3>Ray-Ban Meta Wayfarer</h3>
-        <p>Design icônico com tecnologia de ponta.</p>
+
+    <!-- Bateria -->
+    <section id="battery" class="container">
+      <div class="fade-up" data-fade>
+        <h2>Agora a bateria tem o dobro de duração</h2>
+        <p class="lead">Com até 8 horas de bateria e 48 horas extras do estojo carregador, você pode aproveitar suas
+          fotos, músicas e a Meta AI por muito mais tempo.</p>
       </div>
-    </div>  fecha container -->
-  <!--</section> fecha products -->
-  
-  <!-- Rodapé -->
+      <div class="media-preview fade-up" data-fade>
+        <video muted autoplay loop playsinline src="VideoCapinha.mp4" poster="assets/battery-poster.jpg"></video>
+      </div>
+    </section>
+
+    <!-- Áudio / Música -->
+    <section id="music" class="container">
+      <div class="fade-up" data-fade>
+        <h2>Ouça sua música, sem deixar de ouvir o mundo</h2>
+        <p class="lead">Ouça música e muito mais com os discretos alto-falantes Bluetooth open-ear que oferecem áudio de
+          qualidade superior sem isolar você do mundo.</p>
+      </div>
+      <div class="media-preview fade-up" data-fade>
+        <video muted autoplay loop playsinline src="VideoMusica.mp4" poster="assets/music-poster.jpg"></video>
+      </div>
+    </section>
+
+    <!-- Compartilhar -->
+    <section id="share" class="container">
+      <div class="fade-up" data-fade>
+        <h2>Compartilhe seu ponto de vista de forma eficaz</h2>
+        <p class="lead">Leve uma nova perspectiva às suas ligações de vídeo usando a câmera dos óculos para compartilhar
+          o que você está vendo. Garanta um áudio de melhor qualidade bloqueando até 90% dos ruídos de fundo durante as
+          ligações.</p>
+      </div>
+      <div class="media-preview fade-up" data-fade>
+        <video muted autoplay loop playsinline src="VideoSeupontoDeVista.mp4" poster="assets/share-poster.jpg"></video>
+      </div>
+    </section>
+
+    <!-- Modelos Ray-Ban Meta -->
+<section id="models" class="container">
+  <div class="fade-up" data-fade>
+    <h2>Confira as novidades Ray-Ban Meta</h2>
+  </div>
+
+  <div class="models-center" style="margin-top:28px">
+    <div class="card fade-up" data-fade>
+      <img src="" alt="Ray-Ban Wayfarer (2ª gen.)">
+      <h3>Wayfarer (2ª ger.)</h3>
+      <a class="btn primary" href="#">Comprar Wayfarer</a>
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- Hey Meta / Vídeo integrado -->
+<section id="ai" class="container hey-meta">
+  <div class="fade-up" data-fade>
+    <h2>Hey Meta, me fale sobre sua arquitetura</h2>
+    <p class="lead">Pergunte, traduza, receba sugestões e lembretes em tempo real com a Meta AI. Peça aos óculos
+      informações sobre pontos turísticos, rotas, insights e mais.</p>
+  </div>
+
+  <div class="media-preview fade-up" data-fade>
+    <video id="aiVideo" muted autoplay loop playsinline src="videoCabeloRosa.mp4" poster="assets/ai-poster.jpg"></video>
+    <div class="video-controls">
+      <button id="playPause">⏯️</button>
+      <button id="muteUnmute">🔊</button>
+    </div>
+  </div>
+</section>
+<script>
+  const video = document.getElementById('aiVideo');
+  const playPauseBtn = document.getElementById('playPause');
+  const muteUnmuteBtn = document.getElementById('muteUnmute');
+
+  playPauseBtn.addEventListener('click', () => {
+    if (video.paused) video.play();
+    else video.pause();
+  });
+
+  muteUnmuteBtn.addEventListener('click', () => {
+    video.muted = !video.muted;
+  });
+</script>
+
+
+    <!-- Estilo e inovação (hotspots no óculos) -->
+    <section id="style" class="container">
+      <div class="fade-up" data-fade>
+        <h2>Os AI glasses mais estilosos, ainda melhores</h2>
+        <p class="lead">Veja como os óculos Ray-Ban Meta combinam estilo atemporal com tecnologia de ponta.</p>
+      </div>
+      <div class="media-preview fade-up" data-fade>
+        <img src="raybanOculos.webp" alt="Modelo Ray-Ban com hotspots">
+      </div>
+    </section>
+
+    <!-- Controle / App / Privacidade / Acessibilidade -->
+    <section id="control" class="container">
+      <div class="fade-up" data-fade>
+        <h2>Você está no controle da sua experiência</h2>
+      </div>
+      <div class="grid cols-3" style="margin-top:28px">
+        <div class="card fade-up" data-fade>
+          <img src="metaApp.webp" alt="App Meta">
+          <h3>Meta AI app</h3>
+          <p class="muted">Use o app Meta para gerenciar seus óculos, personalizar configurações e pedidos de linguagem
+            da AI.</p>
+        </div>
+        <div class="card fade-up" data-fade>
+          <img src="privacidade22.webp" alt="Privacidade">
+          <h3>Privacidade</h3>
+          <p class="muted">Indicação visual de gravação, desligamento manual de câmera e controle total sobre seus
+            dados.</p>
+        </div>
+        <div class="card fade-up" data-fade>
+          <img src="Acessibilidade2.webp" alt="Acessibilidade">
+          <h3>Accessibilidade</h3>
+          <p class="muted">Recursos de acessibilidade integrados para pessoas com diferentes necessidades visuais e
+            auditivas.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA final -->
+    <section id="buy" class="cta">
+      <h2>Pronto para experimentar?</h2>
+      <p>Compre o Ray-Ban Meta agora — escolha modelo, cor e lentes para levar sua perspectiva ao próximo nível.</p>
+      <div class="btn-group">
+        <a class="btn primary" href="#">Comprar agora</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- RODAPÉ -->
   <footer>
-    <div class="footer-container">
+    <div class="container">
       <p>© 2025 Mercadotica. Todos os direitos reservados.</p>
-      <div class="social">
-        <a href="https://www.instagram.com/mercadotica" target="_blank" rel="noopener noreferrer">Instagram</a> |
-        <a href="https://www.facebook.com/mercadotica" target="_blank" rel="noopener noreferrer">Facebook</a> |
-        <a href="https://www.mercadotica.com" target="_blank" rel="noopener noreferrer">Site Oficial</a>
-      </div>
+      <div><a href="#">Política de Privacidade</a> • <a href="#">Termos de Uso</a></div>
     </div>
   </footer>
 
+  <script>
+    // Scroll reveal (fade-up)
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('[data-fade]').forEach(el => observer.observe(el));
 
-</html> 
+    // Vídeos autoplay quando entram em viewport
+    const vids = document.querySelectorAll('video[data-autoplay]');
+    const vidObs = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        const v = entry.target;
+        if (entry.isIntersecting) v.play().catch(() => { }); else v.pause();
+      });
+    }, { threshold: 0.4 });
+    vids.forEach(v => vidObs.observe(v));
+
+    // Pausar vídeo principal quando aba inativa
+    document.addEventListener('visibilitychange', () => {
+      const v0 = document.querySelector('video');
+      if (!v0) return;
+      if (document.hidden) v0.pause();
+      else v0.play().catch(() => { });
+    });
+  </script>
+</body>
+
+</html>
