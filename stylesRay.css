@@ -359,8 +359,8 @@ h3 {
 }
 
 .detalhe-titulo img {
-    height: 24px;
-    width: 24px;
+    height: 50px;
+    width: 50px;
     object-fit: contain;
 }
 
