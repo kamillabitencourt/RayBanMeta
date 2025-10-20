@@ -1,0 +1,587 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    color: #000000;
+    background-color: #ffffff;
+    line-height: 1.4;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.2s;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+/* Container de conteúdo principal - Ajustado para dar espaço ao painel fixo */
+main {
+    padding-top: 60px;
+    /* Altura da navbar fixa */
+    /* Margem para acomodar o painel fixo (380px do painel + 40px de respiro) */
+    padding-right: 420px;
+}
+
+/* Estilo para todas as seções */
+section {
+    padding: 80px 20px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 12px 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+    transition: background 0.3s ease;
+}
+
+
+.navbar .logo img {
+    height: 55px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+}
+
+.navbar a {
+    color: #000000;
+    font-weight: 400;
+    font-size: 0.95rem;
+    letter-spacing: 0.2px;
+}
+
+/* ===== PRODUTO DETALHE (Seção Principal) ===== */
+.produto-detalhe {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #ffffff;
+}
+
+/* AJUSTES NO PRODUTO CONTAINER: Aumenta a largura para dar destaque à galeria */
+.produto-container {
+    display: block;
+    max-width: 1000px;
+    /* Largura maior para a galeria */
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===== GALERIA DE IMAGENS - Efeito de Zoom Adicionado ===== */
+.galeria-produto {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.imagem-principal {
+    width: 100%;
+    overflow: hidden;
+    cursor: zoom-in;
+    /* Indica que é clicável para zoom */
+}
+
+.imagem-principal img {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    transition: transform 0.3s ease-out;
+    /* Suaviza o efeito */
+}
+
+.imagem-principal img:hover {
+    transform: scale(1.05);
+    /* Efeito de aumento ao passar o mouse */
+}
+
+.miniaturas {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+    flex-wrap: wrap;
+}
+
+.miniaturas img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    background-color: #f7f7f7;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid #e0e0e0;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.miniaturas img.selected {
+    border-color: #000000;
+    box-shadow: 0 0 0 1px #000000;
+}
+
+/* ===== NOVO PAINEL DE INFORMAÇÕES (FIXO na Lateral) ===== */
+.side-info-panel {
+    position: fixed;
+    top: 60px;
+    right: 0;
+    height: calc(100vh - 60px);
+    width: 380px;
+    background-color: #ffffff;
+    padding: 20px 40px;
+    border-left: 1px solid #e0e0e0;
+    z-index: 999;
+    overflow-y: auto;
+}
+
+.produto-info {
+    position: static;
+    display: flex;
+    flex-direction: column;
+}
+
+.produto-info h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.tag-novo {
+    color: #e60000;
+    font-weight: 600;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.produto-opcoes {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.produto-opcoes p {
+    font-size: 0.95rem;
+    font-weight: 400;
+}
+
+.cores {
+    display: flex;
+    gap: 8px;
+    margin-top: 5px;
+}
+
+.cor {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid #999;
+    cursor: pointer;
+    transition: border-color 0.2s, outline 0.2s;
+}
+
+.cor.selected {
+    border: 3px solid #000;
+    outline: 1px solid #fff;
+}
+
+.preco {
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+.btn-comprar {
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    padding: 16px 20px;
+    width: 100%;
+    border-radius: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-comprar:hover {
+    background-color: #333333;
+}
+
+.descricao {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #444;
+    margin-top: 25px;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 25px;
+}
+
+
+/* ===== RECURSOS META AI (Cards) - Ajustado para preencher a largura ===== */
+.meta-ai-section {
+    padding: 100px 20px;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+.meta-ai-section h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 60px;
+}
+
+.meta-ai-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.meta-card {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+    cursor: default;
+    transition: box-shadow 0.3s;
+}
+
+.meta-card video {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.meta-card-text {
+    padding: 25px 20px;
+    text-align: left;
+}
+
+.meta-card-text h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.meta-card-text p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* ===== DETALHES PRODUTO (Estrutura Modular) ===== */
+.detalhes-produto {
+    padding: 60px 20px;
+    background-color: #ffffff;
+}
+
+.detalhes-produto h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-align: left;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.detalhes-grid {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px 40px;
+}
+
+.detalhe-item {
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.detalhe-item:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.detalhes-grid>div:nth-last-child(-n+2) {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+
+.detalhe-titulo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.detalhe-titulo img {
+    height: 24px;
+    width: 24px;
+    object-fit: contain;
+}
+
+.detalhe-titulo h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #000;
+}
+
+.detalhe-item table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.detalhe-item th,
+.detalhe-item td {
+    padding: 8px 0;
+    text-align: left;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #444;
+    border-bottom: none;
+}
+
+.detalhe-item th {
+    width: 50%;
+    font-weight: 500;
+    color: #000;
+}
+
+.legal-text {
+    max-width: 900px;
+    margin: 60px auto 0;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: #666;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 30px;
+}
+
+.legal-text p {
+    margin-bottom: 15px;
+}
+
+.legal-text .small-print {
+    font-size: 0.75rem;
+    color: #888;
+}
+
+
+/* ===== FOOTER ===== */
+.footer {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #ffffff;
+    color: #2414d1;
+    font-size: 0.85rem;
+    font-weight: 300;
+}
+
+/* ===== RESPONSIVIDADE (MOBILE) - CORRIGIDA A ORDEM DE EXIBIÇÃO ===== */
+@media (max-width: 992px) {
+
+    /* Remove a margem extra do main e deixa-o em 100% da largura */
+    main {
+        padding-right: 0;
+        /* HACK: Se o main for o pai direto, podemos usar flex para garantir a ordem */
+        /* display: flex; 
+        flex-direction: column; */
+    }
+
+    /* O painel lateral FIXO vira um elemento normal de bloco no mobile */
+    .side-info-panel {
+        position: relative;
+        top: auto;
+        right: auto;
+        height: auto;
+        width: 100%;
+        border-left: none;
+        /* O painel de compra fica no topo, então removemos a padding-top que era para a navbar */
+        padding: 20px;
+
+        /* AQUI ESTÁ A CHAVE: Order 1 para aparecer ANTES da galeria/detalhes no mobile */
+        /* Se o main/pai for um flex/grid container, isso garante que ele seja o primeiro item. */
+        /* order: 1; */
+
+        display: block;
+        z-index: 1;
+        /* Não precisa de um z-index muito alto */
+    }
+
+    /* O elemento que contém a galeria fica abaixo do painel de compra */
+    .produto-detalhe {
+        padding-top: 0;
+        /* Remove padding-top desnecessário após o painel de compra */
+        padding-bottom: 0;
+        /* order: 2; */
+        /* Se o main/pai for um flex/grid container, isso garante que ele seja o segundo item. */
+    }
+
+    .produto-container {
+        max-width: 100%;
+        gap: 40px;
+        padding-bottom: 40px;
+    }
+
+    /* Adaptação dos cards de recursos */
+    .meta-ai-cards {
+        grid-template-columns: 1fr;
+        /* Coluna única no mobile */
+        padding: 0;
+    }
+
+    .meta-card video {
+        height: 200px;
+        /* Reduz a altura do vídeo no mobile */
+    }
+
+    .detalhes-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .detalhe-item {
+        border-bottom: 1px solid #e0e0e0;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+    }
+
+    .detalhe-item:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        padding: 0 15px;
+        height: 50px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .produto-detalhe,
+    .meta-ai-section {
+        padding: 40px 15px;
+    }
+
+    .produto-info h1 {
+        font-size: 1.5rem;
+    }
+
+    .preco {
+        font-size: 1.5rem;
+    }
+
+    .meta-ai-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .detalhes-produto h2 {
+        font-size: 1.4rem;
+    }
+
+    .detalhe-item th,
+    .detalhe-item td {
+        font-size: 0.85rem;
+    }
+
+    .legal-text {
+        margin-top: 40px;
+        padding-top: 20px;
+        font-size: 0.8rem;
+    }
+}
+/* ===== ESTILOS PARA O EXPERIMENTADOR ONLINE (Virtual Try-On Hack) ===== */
+
+.try-on-wrapper {
+    /* Centraliza o container principal do experimentador */
+    max-width: 900px;
+    /* Defina a largura máxima que você deseja */
+    margin: 80px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.try-on-wrapper h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.try-on-container {
+    /* Define o limite da área visível */
+    width: 100%;
+    height: 700px;
+    /* ALTURA VISÍVEL: Ajuste este valor se a barra ainda aparecer */
+    position: relative;
+    overflow: hidden;
+    /* CRUCIAL: Esconde o que excede o limite (a tarja de compra) */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.try-on-container iframe {
+    /* O iFrame preenche o container */
+    width: 100%;
+    height: 100%;
+    display: block;
+
+    /* A CHAVE: Posiciona o iFrame para que a tarja de compra fique forada da área visível. */
+    /* Este valor (por exemplo, 100px) empurra o conteúdo inferior para baixo */
+    height: calc(100% + 100px);
+
+    /* Nota: Se a tarja estiver na parte superior, você usaria 'margin-top: -[valor]' */
+}
+
+.try-on-info {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 15px;
+}

@@ -30,20 +30,29 @@
 
   <main>
     <!-- HERO / vídeo de abertura -->
-    <section class="hero" id="hero">
-      <video autoplay muted loop playsinline src="VideoRayBanGen2.mp4"></video>
-      <div class="inner">
-        <div class="brand-logos">
-          <img src="assets/logo-rayban.png" alt="Ray-Ban">
-          <img src "assets/logo-meta.png" alt="Meta">
-        </div>
-        <h1>Conheça o Ray-Ban Meta</h1>
-        <div class="btn-group">
-          <a class="btn primary" href="#quality">Saiba mais</a>
-          <a class="btn ghost" href="#buy">Comprar</a>
-        </div>
-      </div>
-    </section>
+<section class="hero">
+  <video autoplay muted loop playsinline>
+    <source src="VideoRayBanGen2.mp4" type="video/mp4" />
+  </video>
+
+  <div class="inner">
+    <!--
+    <div class="brand-logos">
+      <img src="img/rayban-logo.png" alt="Ray-Ban" />
+      <img src="img/meta-logo.png" alt="Meta" />
+    </div> -->
+
+    <h1>Conheça o novo Ray-Ban Meta</h1>
+    <p>Conheça os óculos com IA campeões de venda, agora com mais cores e novas tecnologias que você vai amar.</p>
+
+    <div class="btn-group">
+      <a href="#mais" class="btn primary">Saiba mais</a>
+      <a href="wayfarer.html" class="btn ghost">Comprar o Ray-Ban Meta</a>
+    </div>
+  </div>
+</section>
+
+
 
     <!-- Qualidade / 3K, Estabilização, Câmera lenta -->
     <section id="quality" class="container">
@@ -131,9 +140,9 @@
 
       <div class="models-center" style="margin-top:28px">
         <div class="card fade-up" data-fade>
-          <img src="" alt="Ray-Ban Wayfarer (2ª gen.)">
+          <img src="oculosVitrine.avif" alt="Ray-Ban Wayfarer (2ª gen.)">
           <h3>Wayfarer (2ª ger.)</h3>
-          <a class="btn primary" href="#">Comprar Wayfarer</a>
+          <a href="wayfarer.html" class="btn primary">Comprar Wayfarer</a>
         </div>
       </div>
     </section>
@@ -174,15 +183,40 @@
 
 
     <!-- Estilo e inovação (hotspots no óculos) -->
-    <section id="style" class="container">
-      <div class="fade-up" data-fade>
-        <h2>Os AI glasses mais estilosos, ainda melhores</h2>
-        <p class="lead">Veja como os óculos Ray-Ban Meta combinam estilo atemporal com tecnologia de ponta.</p>
-      </div>
-      <div class="media-preview fade-up" data-fade>
-        <img src="raybanOculos.webp" alt="Modelo Ray-Ban com hotspots">
-      </div>
-    </section>
+<section id="style" class="container">
+  <div class="fade-up" data-fade>
+    <h2>Os AI glasses mais estilosos, ainda melhores</h2>
+    <p class="lead">Veja como os óculos Ray-Ban Meta combinam estilo atemporal com tecnologia de ponta.</p>
+  </div>
+  <div class="media-preview fade-up hotspot-container" data-fade>
+    <img src="raybanOculos.webp" alt="Modelo Ray-Ban com hotspots">
+
+    <div class="hotspot" style="top: 40%; left: 24%;">
+      <span class="hotspot-icon">+</span>
+      <span class="hotspot-info">Touchpad</span>
+    </div>
+
+    <div class="hotspot" style="top: 45%; left: 35%;">
+      <span class="hotspot-icon">+</span>
+      <span class="hotspot-info">Botão de Captura</span>
+    </div>
+
+    <div class="hotspot" style="top: 55%; left: 54%;">
+      <span class="hotspot-icon">+</span>
+      <span class="hotspot-info">Resolução 3K Ultra HD</span>
+    </div>
+
+    <div class="hotspot" style="top: 5%; left: 63%;">
+      <span class="hotspot-icon">+</span>
+      <span class="hotspot-info">Alto-falanteS open-ear</span>
+    </div>
+
+    <div class="hotspot" style="top: 12%; left: 87%;">
+      <span class="hotspot-icon">+</span>
+      <span class="hotspot-info">Maior duração da bateria</span>
+    </div>
+  </div>
+</section>
 
     <!-- Controle / App / Privacidade / Acessibilidade -->
     <section id="control" class="container">

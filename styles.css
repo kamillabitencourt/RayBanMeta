@@ -34,7 +34,8 @@ body {
 }
 
 .navbar .logo img {
-    height: 40px;
+    height:60px;
+    width: auto;
 }
 
 .navbar ul {
@@ -66,9 +67,8 @@ body {
     text-align: center;
     color: #fff;
     background: rgba(0, 0, 0, 0.4);
-    /* leve overlay pra dar contraste */
     z-index: 2;
-    padding: 0 20px;
+    padding-top:450px;
 }
 
 .hero video {
@@ -80,11 +80,10 @@ body {
     object-fit: cover;
     z-index: 0;
 }
-
 .hero .inner {
     z-index: 2;
     max-width: 900px;
-    padding: 0 20px;
+    text-align: center;
 }
 
 .hero .brand-logos {
@@ -92,31 +91,40 @@ body {
     justify-content: center;
     align-items: center;
     gap: 12px;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
+    margin-top: 60px;
 }
-
 .hero .brand-logos img {
-    height: 48px;
+    height: 45px;
+    width: auto;
+}
+.hero .brand-logos img:hover {
+    transform: scale(1.05);
 }
 
 .hero h1 {
     font-size: 3rem;
     font-weight: 700;
-    margin-top: 500px;
-    /* 🔽 empurra o título mais pra baixo */
-    margin-bottom: 10px;
-    /* ajusta espaçamento padrão abaixo */
+    margin-bottom: 8px;
     color: #fff;
-    /* mantém branco com contraste */
     text-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-    /* melhora visibilidade em fundo claro */
 }
 
 .hero p {
     font-size: 1.2rem;
     max-width: 700px;
     line-height: 1.6;
-    margin-top: 10px;
+    margin-bottom: 32px;
+}
+.hero-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 100px;
+    /* distância entre logos e título */
+    margin-top: 300px;
+    /* 🔹 Aumente esse valor se quiser descer as logos também */
 }
 
 @media (max-width: 768px) {
@@ -387,17 +395,19 @@ footer a:hover {
     transform: translateY(0);
 }
 
-.hey-meta {
-    padding-top: 140px;
-    /* aumenta o espaçamento para descer mais */
-    color: #fff;
-    /* texto branco */
+.hey-meta h2 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #8e2de2, #4a00e0, #00c6ff, #ff00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .hey-meta h2,
 .hey-meta p {
     color: #fff;
 }
+
 
 /* Player discreto no canto inferior direito */
 .video-controls {
@@ -417,4 +427,149 @@ footer a:hover {
     color: #fff;
     font-size: 16px;
     cursor: pointer;
+}
+/* Qualidade / vídeos */
+.quality-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.quality-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.quality-card video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* mantém todo o vídeo visível */
+    display: block;
+    background: #000;
+    /* opcional, caso haja espaço extra ao redor */
+}
+
+.overlay {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: #fff;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.2);
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.quality-card.large {
+    height: auto;
+    /* ou ajustar proporcionalmente */
+    aspect-ratio: 16/9;
+    /* mantém proporção do vídeo */
+}
+
+.quality-bottom {
+    display: flex;
+    gap: 20px;
+}
+
+.quality-card.small {
+    height: auto;
+    aspect-ratio: 16/9;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .quality-bottom {
+        flex-direction: column;
+    }
+
+    .quality-card.large {
+        height: 300px;
+    }
+
+    .quality-card.small {
+        height: 180px;
+    }
+}
+/* ===== HOTSPOTS PARA SEÇÃO #STYLE (NOVO VISUAL) ===== */
+.hotspot-container {
+    position: relative;
+    display: inline-block;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hotspot {
+    position: absolute;
+    cursor: pointer;
+    z-index: 10;
+    /* Estilos iniciais do círculo (hotspot-icon) */
+}
+
+.hotspot-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    /* Visual: Círculo cinza claro/transparente */
+    background: rgba(200, 200, 200, 0.8);
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1;
+    border: 3px solid rgba(255, 255, 255, 0.8);
+    /* Borda branca */
+
+    /* O "+" é azul-claro (Ray-Ban/Meta blue) */
+    color: rgb(0, 180, 255);
+
+    transition: all 0.2s ease;
+}
+
+.hotspot:hover .hotspot-icon {
+    transform: scale(1.1);
+    /* Um pequeno efeito ao passar o mouse */
+    /* Ao passar o mouse, pode inverter as cores ou dar um destaque sutil */
+    background: rgba(0, 180, 255, 0.9);
+    color: #fff;
+    border-color: #fff;
+}
+
+.hotspot-info {
+    position: absolute;
+    top: -5px;
+    /* Posição à esquerda do ícone */
+    right: 35px;
+    /* Ajusta a posição para o lado esquerdo do ícone */
+    white-space: nowrap;
+    padding: 8px 12px;
+    background: #000;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    pointer-events: none;
+}
+
+/* Estado de HOVER: torna o texto visível */
+.hotspot:hover .hotspot-info {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Responsividade: ajusta a posição do tooltip em telas pequenas (mantido do anterior) */
+@media (max-width: 600px) {
+    .hotspot-info {
+        top: 35px;
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(0, 0, 0, 0.9);
+    }
 }
