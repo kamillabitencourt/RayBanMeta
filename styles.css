@@ -139,18 +139,19 @@ body {
 @media (max-width: 768px) {
     .hero h1 {
         font-size: 2rem;
-        margin-top: 150px;
+        margin-top: 50px;
     }
 
     .hero p {
         font-size: 1rem;
+        margin-bottom: 1px;
     }
 }
 
 .btn-group {
     display: flex;
     justify-content: center;
-    gap: 16px;
+    gap: 5px;
 }
 
 .btn {
