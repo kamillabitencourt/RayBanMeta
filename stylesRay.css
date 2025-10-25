@@ -17,23 +17,17 @@ body {
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
 }
-
 a {
     text-decoration: none;
     color: inherit;
     transition: opacity 0.2s;
 }
-
 a:hover {
     opacity: 0.7;
 }
-
-/* Container de conteúdo principal - Ajustado para dar espaço ao painel fixo */
 main {
     padding-top: 60px;
-    /* Altura da navbar fixa */
-    /* Margem para acomodar o painel fixo (380px do painel + 40px de respiro) */
-    padding-right: 420px;
+    padding-right: 0;
 }
 
 /* Estilo para todas as seções */
@@ -57,7 +51,7 @@ h3 {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 12px 4px;
+    padding: 10px 48px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -69,7 +63,7 @@ h3 {
 
 
 .navbar .logo img {
-    height: 55px;
+    height: 50px;
 }
 
 .navbar ul {
@@ -81,293 +75,333 @@ h3 {
 .navbar a {
     color: #000000;
     font-weight: 400;
-    font-size: 0.95rem;
+    font-size: 0.8rem;
     letter-spacing: 0.2px;
 }
 
 /* ===== PRODUTO DETALHE (Seção Principal) ===== */
 .produto-detalhe {
-    padding-top: 60px;
+    padding-top: 15px;
     padding-bottom: 60px;
     background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 20px;
 }
 
-/* AJUSTES NO PRODUTO CONTAINER: Aumenta a largura para dar destaque à galeria */
+/* AJUSTES NO PRODUTO CONTAINER: A galeria agora ocupa todo o espaço à esquerda e se centraliza nele */
 .produto-container {
-    display: block;
-    max-width: 1000px;
-    /* Largura maior para a galeria */
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 20px;
+    width: calc(100% - 380px - 40px);
+    max-width: 1200px;
+    margin-left: 0;
+    margin-right: auto;
+    padding: 0 25px;
 }
-
-/* ===== GALERIA DE IMAGENS - Efeito de Zoom Adicionado ===== */
+/* ===== GALERIA DE IMAGENS - CORREÇÕES PARA TAMANHO E ZOOM ===== */
 .galeria-produto {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
-.imagem-principal {
+.imagem-principal-container {
     width: 100%;
+    position: relative;
+    padding-top: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
-    cursor: zoom-in;
-    /* Indica que é clicável para zoom */
+    cursor: default;
+    margin-bottom: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
 }
 
-.imagem-principal img {
+.imagem-principal-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    max-width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: scale(1.0);
     display: block;
     transition: transform 0.3s ease-out;
-    /* Suaviza o efeito */
 }
 
-.imagem-principal img:hover {
-    transform: scale(1.05);
-    /* Efeito de aumento ao passar o mouse */
+.imagem-principal-container img:hover {
+    transform: scale(1.0);
 }
 
 .miniaturas {
     display: flex;
     gap: 12px;
-    margin-top: 16px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    width: 100%;
+    padding-bottom: 10px;
+    justify-content: center;
 }
 
 .miniaturas img {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
-    background-color: #f7f7f7;
-    border-radius: 4px;
+    width: 140px;
+    height: 100px;
+    object-fit: cover;
     cursor: pointer;
-    border: 1px solid #e0e0e0;
-    transition: border-color 0.2s, box-shadow 0.2s;
+    border: 2px solid transparent;
+    transition: border-color 0.2s;
+    border-radius: 4px;
+    flex-shrink: 0;
 }
 
 .miniaturas img.selected {
     border-color: #000000;
-    box-shadow: 0 0 0 1px #000000;
 }
 
-/* ===== NOVO PAINEL DE INFORMAÇÕES (FIXO na Lateral) ===== */
+/* ===== SIDE INFO PANEL (Painel Lateral Fixo) ===== */
 .side-info-panel {
     position: fixed;
     top: 60px;
     right: 0;
     height: calc(100vh - 60px);
-    width: 380px;
+    width: 300px;
     background-color: #ffffff;
-    padding: 20px 40px;
+    padding: 20px 30px;
     border-left: 1px solid #e0e0e0;
     z-index: 999;
     overflow-y: auto;
 }
 
-.produto-info {
-    position: static;
-    display: flex;
-    flex-direction: column;
-}
-
 .produto-info h1 {
-    font-size: 1.8rem;
-    font-weight: 700;
+    font-size: 2.0rem;
     margin-bottom: 5px;
 }
 
 .tag-novo {
-    color: #e60000;
+    display: inline-block;
+    background-color: #d60f0f;
+    color: #ffffff;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.5em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.cor-selecionada-texto {
+    font-size: 1em;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.cor-selecionada-texto strong {
+    font-weight: 500;
+}
+
+.modelos-opcoes {
+    margin-bottom: 30px;
+}
+
+.opcoes-grupo {
+    margin-bottom: 25px;
+}
+
+.opcoes-grupo label {
+    display: block;
     font-weight: 600;
-    font-size: 0.75rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
 }
 
-.produto-opcoes {
+.opcoes-lista {
     display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 15px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #f0f0f0;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
-.produto-opcoes p {
-    font-size: 0.95rem;
-    font-weight: 400;
-}
-
-.cores {
+.opcoes-lista.cores-lista .opcao-item {
     display: flex;
-    gap: 8px;
-    margin-top: 5px;
-}
-
-.cor {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    border: 1px solid #999;
+    align-items: center;
+    padding: 6px 6px;
+    border: 2px solid #ccc;
+    border-radius: 50px;
     cursor: pointer;
-    transition: border-color 0.2s, outline 0.2s;
+    font-size: 0.5em;
+    transition: all 0.2s;
 }
 
-.cor.selected {
-    border: 3px solid #000;
-    outline: 1px solid #fff;
+.opcoes-lista.cores-lista .opcao-item:hover {
+    border-color: #888;
+}
+
+.opcoes-lista.cores-lista .opcao-item.selected {
+    border-color: #000;
+    background-color: #e0e0e0;
+    font-weight: bold;
+}
+
+.cor-mini {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    margin-right: 1px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
 }
 
 .preco {
-    font-size: 1.7rem;
+    font-size: 2.2rem;
     font-weight: 700;
-    margin: 20px 0;
+    margin-bottom: 25px;
+    color: #333;
 }
 
 .btn-comprar {
+    display: block;
+    width: 85%;
+    padding: 10px 20px;
     background-color: #000000;
-    color: #fff;
-    border: none;
-    padding: 16px 20px;
-    width: 100%;
-    border-radius: 0;
-    font-size: 1rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    cursor: pointer;
-    transition: background 0.3s;
+    color: #ffffff;
+    text-align: center;
+    font-size: 0.8em;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    transition: background-color 0.3s;
 }
 
 .btn-comprar:hover {
     background-color: #333333;
+    opacity: 1;
 }
 
 .descricao {
-    font-size: 0.95rem;
+    font-size: 0.7em;
+    color: #555;
     line-height: 1.6;
-    color: #444;
-    margin-top: 25px;
-    border-top: 1px solid #f0f0f0;
-    padding-top: 25px;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
 }
 
+/* ========================================================== */
+/* SEÇÃO DE CARACTERÍSTICAS (Meta AI) - Afastamento do painel fixo */
+/* ========================================================== */
 
-/* ===== RECURSOS META AI (Cards) - Ajustado para preencher a largura ===== */
 .meta-ai-section {
-    padding: 100px 20px;
-    background-color: #f7f7f7;
+    padding-right: calc(380px + 40px);
     text-align: center;
+    background-color: #f9f9f9;
 }
 
 .meta-ai-section h2 {
-    font-size: 2.2rem;
-    font-weight: 700;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
+    font-size: 2em;
 }
 
 .meta-ai-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 20px;
-    max-width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+}
+@media (max-width: 1250px) {
+    .meta-ai-cards {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
 }
 
 .meta-card {
-    width: 100%;
-    border-radius: 8px;
+    background: #fff;
+    border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    background-color: #fff;
-    cursor: default;
-    transition: box-shadow 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.meta-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .meta-card video {
     width: 100%;
-    height: 300px;
+    height: 200px;
     object-fit: cover;
+    display: block;
 }
 
 .meta-card-text {
-    padding: 25px 20px;
-    text-align: left;
+    padding: 20px;
 }
 
 .meta-card-text h3 {
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: 5px;
+    font-size: 1.3em;
+    margin-top: 0;
+    margin-bottom: 8px;
 }
 
 .meta-card-text p {
-    font-size: 0.9rem;
-    color: #666;
+    font-size: 0.9em;
+    color: #555;
 }
 
-/* ===== DETALHES PRODUTO (Estrutura Modular) ===== */
+/* ========================================================== */
+/* SEÇÃO DE DETALHES - Afastamento do painel fixo */
+/* ========================================================== */
+
 .detalhes-produto {
-    padding: 60px 20px;
-    background-color: #ffffff;
+    padding: 80px 20px 80px 20px;
+    padding-right: calc(380px + 40px);
 }
 
 .detalhes-produto h2 {
-    font-size: 1.6rem;
-    font-weight: 700;
-    margin-bottom: 25px;
-    text-align: left;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2em;
 }
 
 .detalhes-grid {
-    max-width: 900px;
-    margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 20px 40px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+@media (max-width: 1250px) {
+    .detalhes-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
 }
 
 .detalhe-item {
-    border-bottom: 1px solid #e0e0e0;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
+    background-color: #ffffff;
+    border: 1px solid #eee;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
-
-.detalhe-item:last-of-type {
-    border-bottom: none;
-    margin-bottom: 0;
-}
-
-.detalhes-grid>div:nth-last-child(-n+2) {
-    border-bottom: none;
-    margin-bottom: 0;
-}
-
 
 .detalhe-titulo {
     display: flex;
     align-items: center;
-    gap: 10px;
     margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
 }
 
 .detalhe-titulo img {
-    height: 50px;
-    width: 50px;
-    object-fit: contain;
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    filter: invert(10%);
 }
 
 .detalhe-titulo h3 {
-    font-size: 1.1rem;
+    font-size: 1.2em;
     font-weight: 600;
-    color: #000;
 }
 
 .detalhe-item table {
@@ -379,26 +413,35 @@ h3 {
 .detalhe-item td {
     padding: 8px 0;
     text-align: left;
-    font-size: 0.9rem;
-    font-weight: 400;
-    color: #444;
-    border-bottom: none;
+    font-size: 0.95em;
+    border-bottom: 1px dashed #f0f0f0;
 }
 
 .detalhe-item th {
+    font-weight: 400;
+    color: #666;
     width: 50%;
+}
+
+.detalhe-item td {
     font-weight: 500;
-    color: #000;
+    color: #333;
+}
+
+.detalhe-item tr:last-child th,
+.detalhe-item tr:last-child td {
+    border-bottom: none;
 }
 
 .legal-text {
-    max-width: 900px;
-    margin: 60px auto 0;
-    font-size: 0.85rem;
-    line-height: 1.6;
-    color: #666;
-    border-top: 1px solid #e0e0e0;
+    max-width: 1000px;
+    margin: 60px auto 0 auto;
     padding-top: 30px;
+    border-top: 1px solid #eee;
+    text-align: justify;
+    font-size: 0.85em;
+    color: #777;
+    line-height: 1.8;
 }
 
 .legal-text p {
@@ -406,182 +449,143 @@ h3 {
 }
 
 .legal-text .small-print {
-    font-size: 0.75rem;
-    color: #888;
+    font-size: 0.75em;
+    line-height: 1.6;
+    display: block;
+    margin-top: 20px;
 }
-
 
 /* ===== FOOTER ===== */
 .footer {
-    padding: 40px 20px;
+    background-color: #fffefe;
+    color: #022368;
+    padding: 20px 20px;
     text-align: center;
-    background-color: #ffffff;
-    color: #2414d1;
-    font-size: 0.85rem;
-    font-weight: 300;
+    font-size: 0.9em;
 }
 
-/* ===== RESPONSIVIDADE (MOBILE) - CORRIGIDA A ORDEM DE EXIBIÇÃO ===== */
-@media (max-width: 992px) {
 
-    /* Remove a margem extra do main e deixa-o em 100% da largura */
-    main {
-        padding-right: 0;
-        /* HACK: Se o main for o pai direto, podemos usar flex para garantir a ordem */
-        /* display: flex; 
-        flex-direction: column; */
+/* ========================================================== */
+/* MEDIA QUERIES (Para telas menores que 900px) */
+/* ========================================================== */
+
+@media (max-width: 1200px) {
+    .navbar ul {
+        gap: 20px;
     }
+}
 
-    /* O painel lateral FIXO vira um elemento normal de bloco no mobile */
+
+@media (max-width: 900px) {
+
     .side-info-panel {
-        position: relative;
-        top: auto;
-        right: auto;
-        height: auto;
+        position: static;
         width: 100%;
+        height: auto;
+        padding: 30px 20px;
+        box-shadow: none;
+        background-color: #ffffff;
+        order: 1;
         border-left: none;
-        /* O painel de compra fica no topo, então removemos a padding-top que era para a navbar */
-        padding: 20px;
-
-        /* AQUI ESTÁ A CHAVE: Order 1 para aparecer ANTES da galeria/detalhes no mobile */
-        /* Se o main/pai for um flex/grid container, isso garante que ele seja o primeiro item. */
-        /* order: 1; */
-
-        display: block;
-        z-index: 1;
-        /* Não precisa de um z-index muito alto */
     }
+imagem-principal-container {
+    padding-top: 75%;
+    /* Tente aumentar a proporção se a imagem for mais "alta" que "larga" */
+    height: auto;
+    /* Garante que o contêiner não seja limitado por uma altura fixa */
+    max-height: 450px;
+    /* Ou um max-height se quiser limitar o crescimento em telas muito grandes no mobile */
+}
 
-    /* O elemento que contém a galeria fica abaixo do painel de compra */
     .produto-detalhe {
-        padding-top: 0;
-        /* Remove padding-top desnecessário após o painel de compra */
-        padding-bottom: 0;
-        /* order: 2; */
-        /* Se o main/pai for um flex/grid container, isso garante que ele seja o segundo item. */
+        padding-right: 20px;
+        padding-top: 30px;
+        flex-direction: column;
+        align-items: center;
     }
-
-    .produto-container {
-        max-width: 100%;
-        gap: 40px;
-        padding-bottom: 40px;
-    }
-
-    /* Adaptação dos cards de recursos */
-    .meta-ai-cards {
-        grid-template-columns: 1fr;
-        /* Coluna única no mobile */
-        padding: 0;
-    }
-
-    .meta-card video {
-        height: 200px;
-        /* Reduz a altura do vídeo no mobile */
-    }
-
-    .detalhes-grid {
-        grid-template-columns: 1fr;
-        gap: 0;
-    }
-
-    .detalhe-item {
-        border-bottom: 1px solid #e0e0e0;
-        margin-bottom: 20px;
-        padding-bottom: 20px;
-    }
-
-    .detalhe-item:last-child {
-        border-bottom: none;
-        margin-bottom: 0;
-        padding-bottom: 0;
-    }
-}
-
-@media (max-width: 600px) {
-    .navbar {
-        padding: 0 15px;
-        height: 50px;
-    }
-
-    .nav-links {
-        display: none;
-    }
-
-    .produto-detalhe,
-    .meta-ai-section {
-        padding: 40px 15px;
-    }
-
-    .produto-info h1 {
-        font-size: 1.5rem;
-    }
-
-    .preco {
-        font-size: 1.5rem;
-    }
-
-    .meta-ai-section h2 {
-        font-size: 1.8rem;
-    }
-
-    .detalhes-produto h2 {
-        font-size: 1.4rem;
-    }
-
-    .detalhe-item th,
-    .detalhe-item td {
-        font-size: 0.85rem;
-    }
-
-    .legal-text {
-        margin-top: 40px;
-        padding-top: 20px;
-        font-size: 0.8rem;
-    }
-}
-/* ===== ESTILOS PARA O EXPERIMENTADOR ONLINE (Virtual Try-On Hack) ===== */
-
-.try-on-wrapper {
-    /* Centraliza o container principal do experimentador */
-    max-width: 900px;
-    /* Defina a largura máxima que você deseja */
-    margin: 80px auto;
-    padding: 0 20px;
-    text-align: center;
-}
-
-.try-on-wrapper h2 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-}
-
-.try-on-container {
-    /* Define o limite da área visível */
-    width: 100%;
-    height: 700px;
-    /* ALTURA VISÍVEL: Ajuste este valor se a barra ainda aparecer */
-    position: relative;
-    overflow: hidden;
-    /* CRUCIAL: Esconde o que excede o limite (a tarja de compra) */
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.try-on-container iframe {
-    /* O iFrame preenche o container */
+.imagem-principal-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
+    object-fit: contain;
+    transform: scale(1.0);
     display: block;
-
-    /* A CHAVE: Posiciona o iFrame para que a tarja de compra fique forada da área visível. */
-    /* Este valor (por exemplo, 100px) empurra o conteúdo inferior para baixo */
-    height: calc(100% + 100px);
-
-    /* Nota: Se a tarja estiver na parte superior, você usaria 'margin-top: -[valor]' */
+    transition: transform 0.3s ease-out;
+}
+.produto-container {
+    width: 100%;
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+    align-self: unset;
+    order: 0;
 }
 
-.try-on-info {
-    font-size: 0.9rem;
-    color: #666;
-    margin-top: 15px;
+    .imagem-principal-container,
+    .miniaturas {
+        width: 100%;
+    }
+
+    section {
+        padding: 40px 20px;
+    }
+    .meta-ai-section,
+    .detalhes-produto {
+        padding-right: 20px;
+    }
+
+    .meta-ai-section h2,
+    .detalhes-produto h2 {
+        font-size: 1.8em;
+    }
+
+    .navbar ul {
+        display: none;
+    }
+        .btn-comprar {
+            display: block;
+            width: 85%;
+            padding: 10px 20px;
+            background-color: #000000;
+            color: #ffffff;
+            text-align: center;
+            font-size: 0.8em;
+            font-weight: bold;
+            border-radius: 8px;
+            margin: 0 auto 12px auto;
+            /* AQUI ESTÁ A MUDANÇA: margem horizontal 'auto' */
+            transition: background-color 0.3s;
+        }
+        .miniaturas {
+            display: flex;
+            gap: 12px;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            width: 100%;
+            padding-bottom: 10px;
+            justify-content: center;
+        }
+    
+/* Se o BOX-SIZING NÃO FUNCIONAR, use este método: */
+
+.miniaturas img {
+    width: 140px;
+    height: 100px;
+    object-fit: contain;
+    cursor: pointer;
+    /* Remova a BORDER e use OUTLINE no item selecionado */
+    transition: outline-color 0.2s; 
+    border-radius: 4px;
+    flex-shrink: 0;
+    outline: 2px solid transparent; /* Adicione outline transparente por padrão */
+    outline-offset: -2px; /* Garante que o outline fique 'colado' à imagem */
+}
+
+.miniaturas img.selected {
+    /* Mude para OUTLINE em vez de BORDER */
+    outline-color: #000000;
+}
 }
