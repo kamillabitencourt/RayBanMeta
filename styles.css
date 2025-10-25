@@ -81,7 +81,11 @@ body {
     object-fit: cover;
     z-index: 0;
 }
-
+:root {
+    /* Define o quanto a rolagem deve parar ANTES do alvo (compensando a navbar) */
+    scroll-padding-top: 80px;
+    /* Use um valor um pouco maior que a altura da sua navbar (~70px) */
+}
 .hero .inner {
     z-index: 2;
     max-width: 900px;
