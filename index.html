@@ -308,6 +308,23 @@
       else v0.play().catch(() => { });
     });
   </script>
+  <script>
+    // Ativar hotspots por toque no celular
+    document.querySelectorAll('.hotspot').forEach(hotspot => {
+      hotspot.addEventListener('click', function (e) {
+        e.stopPropagation(); // Evita conflito com outros toques
+        this.classList.toggle('active'); // Mostra/oculta o texto
+      });
+    });
+
+    // Fechar hotspot se clicar fora
+    document.addEventListener('click', function (e) {
+      if (!e.target.closest('.hotspot')) {
+        document.querySelectorAll('.hotspot.active').forEach(h => h.classList.remove('active'));
+      }
+    });
+  </script>
+
 </body>
 
 </html>

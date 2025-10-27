@@ -594,3 +594,20 @@ footer a:hover {
 .model-card .btn.primary:hover {
     background: linear-gradient(90deg, #00b8ff, #0077ff);
 }
+.hotspot-info {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
+
+/* Mostra tooltip no hover (desktop) */
+.hotspot:hover .hotspot-info {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Mostra tooltip ao clicar (mobile) */
+.hotspot.active .hotspot-info {
+    opacity: 1;
+    visibility: visible;
+}
