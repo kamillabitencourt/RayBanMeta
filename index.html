@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Mercadótica | RayBan Meta</title>
+  <title>Mercadótica | Ray-Ban Meta</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -264,7 +264,7 @@
   <p>Compre o Ray-Ban Meta agora — escolha modelo, cor e lentes para levar sua perspectiva ao próximo nível.</p>
   <div class="btn-group">
     <a class="btn primary"
-      href="https://wa.me/557734296068?text=Olá,%20gostaria%20de%20comprar%20o%20RayBan%20Meta%20">Comprar agora</a>
+      href="https://wa.me/557734296068?text=Olá,%20gostaria%20de%20comprar%20o%20Ray-Ban%20Meta%20">Comprar agora</a>
   </div>
 </section>
 
@@ -308,22 +308,55 @@
       else v0.play().catch(() => { });
     });
   </script>
-  <script>
-    // Ativar hotspots por toque no celular
-    document.querySelectorAll('.hotspot').forEach(hotspot => {
-      hotspot.addEventListener('click', function (e) {
-        e.stopPropagation(); // Evita conflito com outros toques
-        this.classList.toggle('active'); // Mostra/oculta o texto
-      });
-    });
+<script>
+  // Ativar hotspots por toque no celular
+  document.querySelectorAll('.hotspot').forEach(hotspot => {
+    hotspot.addEventListener('click', function (e) {
+      e.stopPropagation();
 
-    // Fechar hotspot se clicar fora
-    document.addEventListener('click', function (e) {
-      if (!e.target.closest('.hotspot')) {
-        document.querySelectorAll('.hotspot.active').forEach(h => h.classList.remove('active'));
+      // Fecha todos os outros antes de abrir o atual
+      document.querySelectorAll('.hotspot.active').forEach(h => {
+        if (h !== this) h.classList.remove('active');
+      });
+
+      // Alterna apenas o clicado
+      this.classList.toggle('active');
+    });
+  });
+
+  // Fecha todos ao clicar fora
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.hotspot')) {
+      document.querySelectorAll('.hotspot.active').forEach(h => h.classList.remove('active'));
+    }
+  });
+</script>
+<script>
+  // Ajusta posição automática do tooltip se estiver perto da borda
+  function adjustTooltipPositions() {
+    document.querySelectorAll('.hotspot').forEach(hotspot => {
+      const info = hotspot.querySelector('.hotspot-info');
+      if (!info) return;
+
+      // Reseta alinhamento
+      info.removeAttribute('data-align');
+
+      const rect = hotspot.getBoundingClientRect();
+      const screenWidth = window.innerWidth;
+
+      if (rect.left < 80) {
+        info.setAttribute('data-align', 'left');
+      } else if (screenWidth - rect.right < 80) {
+        info.setAttribute('data-align', 'right');
       }
     });
-  </script>
+  }
+
+  // Reajusta quando carrega e ao redimensionar
+  window.addEventListener('load', adjustTooltipPositions);
+  window.addEventListener('resize', adjustTooltipPositions);
+</script>
+
 
 </body>
 

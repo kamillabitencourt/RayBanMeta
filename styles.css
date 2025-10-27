@@ -611,3 +611,28 @@ footer a:hover {
     opacity: 1;
     visibility: visible;
 }
+@media (max-width: 768px) {
+    .hotspot-info {
+        bottom: auto;
+        top: 110%;
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: normal;
+        width: max-content;
+        max-width: 180px;
+        text-align: center;
+    }
+    .hotspot-info::after {
+        top: -6px;
+        transform: translateX(-50%) rotate(180deg);
+    }
+        .hotspot-info[data-align="left"] {
+            left: 10%;
+            transform: translateX(0);
+        }
+                .hotspot-info[data-align="right"] {
+                    left: auto;
+                    right: 10%;
+                    transform: translateX(0);
+                }
+}
