@@ -3,360 +3,451 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Mercadótica | Ray-Ban Meta</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Ray-Ban Meta | Mercadótica</title>
+  <meta name="description" content="Conheça os óculos Ray-Ban Meta com IA, câmera 3K e áudio open-ear. Compre na Mercadótica." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ray-Ban Meta | Mercadótica" />
+  <meta property="og:description" content="Óculos com IA, câmera 3K e áudio open-ear. Compre na Mercadótica." />
+  <!-- Troque pelo domínio real e crie a imagem og.jpg (1200x630) -->
+  <meta property="og:image" content="https://SEU-DOMINIO/og.jpg" />
+  <link rel="icon" href="favicon.png" />
+
+  <!-- Fonte parecida com a da Meta -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="styles.css" />
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
+  <!-- NAVBAR (somente logo) -->
   <header class="navbar">
-    <div class="logo"><img src="mercadotica.png" alt="Logo"></div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#quality">Qualidade</a></li>
-        <li><a href="#battery">Bateria</a></li>
-        <li><a href="#music">Áudio</a></li>
-        <li><a href="#share">Compartilhar</a></li>
-        <li><a href="#models">Modelos</a></li>
-        <li><a href="#ai">Meta AI</a></li>
-        <li><a href="#control">Controle</a></li>
-        <li><a href="#buy">Comprar</a></li>
-      </ul>
-    </nav>
+    <a class="logo" href="index.html"><img src="mercadotica.png" alt="Mercadótica"></a>
   </header>
 
   <main>
-    <!-- HERO / vídeo de abertura -->
-<section class="hero">
-  <video autoplay muted loop playsinline>
-    <source src="VideoRayBanGen2.mp4" type="video/mp4" />
-  </video>
 
-  <div class="inner">
-    <!--
-    <div class="brand-logos">
-      <img src="img/rayban-logo.png" alt="Ray-Ban" />
-      <img src="img/meta-logo.png" alt="Meta" />
-    </div> -->
+    <!-- HERO -->
+    <section class="hero">
+      <!-- data-mobile-src: vídeo usado em telas até 768px -->
+      <video autoplay muted loop playsinline preload="metadata"
+        src="geracaotres/RAYBANMETA2.mp4"
+        data-mobile-src="geracaotres/capamobile.mp4"></video>
 
-    <h1>Conheça o novo Ray-Ban Meta</h1>
-    <p>Conheça os óculos com IA campeões de venda, agora com mais cores e novas tecnologias que você vai amar.</p>
+      <div class="inner">
+        <h1>Novo Ray-Ban Meta<br>Geração 3</h1>
+        <p>Conheça os óculos com IA campeões de venda, agora com mais cores e novas tecnologias que você vai amar.</p>
 
-    <div class="btn-group">
-      <a href="#mais" class="btn primary">Saiba mais</a>
-      <a href="wayfarer.html" class="btn ghost">Comprar o Ray-Ban Meta</a>
-    </div>
-  </div>
-</section>
+        <div class="btn-group">
+          <a href="#quality" class="btn primary">Saiba mais</a>
+          <a href="wayfarer.html" class="btn ghost">Comprar o Ray-Ban Meta</a>
+        </div>
+      </div>
+    </section>
 
-
-
-    <!-- Qualidade / 3K, Estabilização, Câmera lenta -->
+    <!-- QUALIDADE -->
     <section id="quality" class="container">
       <div class="fade-up" data-fade>
-        <h2>Capture vídeos com qualidade superior</h2>
-        <p class="lead">
-          Com a nova resolução <strong>3K Ultra HD</strong> e uma câmera ultra-wide de 12 MP, seus vídeos
-          ganham nitidez e riqueza de detalhes para você reviver todos os seus momentos especiais.
-        </p>
+        <h2>Tire a foto perfeita, sempre</h2>
+        <p class="lead">Capture a vida como você a vê com vídeo em 3K ultra HD e uma câmera mais fina e refinada. Basta
+          pedir à Meta para começar a gravar, sem usar as mãos.</p>
       </div>
 
       <div class="quality-grid">
-        <!-- Vídeo 3K Ultra HD (grande) -->
         <div class="quality-card large fade-up" data-fade>
-          <video autoplay muted loop playsinline src="video2.mp4" poster="assets/video2-poster.jpg"></video>
-          <div class="overlay">
-            <h3>3K Ultra HD</h3>
-          </div>
+          <video muted loop playsinline preload="metadata" data-autoplay
+            src="geracaotres/meta-foto.mp4"></video>
         </div>
 
         <div class="quality-bottom">
-          <!-- Estabilização -->
           <div class="quality-card small fade-up" data-fade>
-            <video autoplay muted loop playsinline src="videoEstabilização.mp4"
-              poster="assets/demo-stab-poster.jpg"></video>
+            <img src="geracaotres/alm.webp" alt="Vídeo gravado com os óculos, com imagem estabilizada" loading="lazy">
             <div class="overlay">
               <h3>Estabilização</h3>
             </div>
           </div>
 
-          <!-- tracucap -->
           <div class="quality-card small fade-up" data-fade>
-            <video autoplay muted loop playsinline src="traducao.mp4" poster="assets/demo-slowmo-poster.jpg"></video>
+            <img src="geracaotres/bruna.webp" alt="Mulher usando os óculos e pedindo à Meta para gravar em câmera lenta" loading="lazy">
             <div class="overlay">
-              <h3>Tradução</h3>
+              <h3>Câmera lenta</h3>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-
-    <!-- Bateria -->
-    <section id="battery" class="container">
+    <!-- MÃOS LIVRES -->
+    <section id="handsfree" class="container section-alt">
       <div class="fade-up" data-fade>
-        <h2>Agora a bateria tem o dobro de duração</h2>
-        <p class="lead">Com até 8 horas de bateria e 48 horas extras do estojo carregador, você pode aproveitar suas
-          fotos, músicas e a Meta AI por muito mais tempo.</p>
+        <h2>Conecte-se facilmente sem usar as mãos</h2>
+        <p class="lead">Perfeitos para quando suas mãos estão cheias, você pode enviar mensagens de texto ou voz, fazer
+          ligações telefônicas e ligações de vídeo, tudo sem pegar seu telefone.</p>
       </div>
       <div class="media-preview fade-up" data-fade>
-        <video muted autoplay loop playsinline src="VideoCapinha.mp4" poster="assets/battery-poster.jpg"></video>
+        <video muted loop playsinline preload="metadata" data-autoplay
+          src="geracaotres/Meta 2.mp4"></video>
       </div>
     </section>
 
-    <!-- Áudio / Música -->
+    <!-- ÁUDIO (foto mais quadrada só no mobile: classe media-square) -->
     <section id="music" class="container">
       <div class="fade-up" data-fade>
-        <h2>Ouça sua música, sem deixar de ouvir o mundo</h2>
-        <p class="lead">Ouça música e muito mais com os discretos alto-falantes Bluetooth open-ear que oferecem áudio de
-          qualidade superior sem isolar você do mundo.</p>
+        <h2>Conecte-se sem se desconectar</h2>
+        <p class="lead">Conecte apps como o Spotify para ouvir com as mãos livres. Desfrute de ligações claras e áudio
+          privado que se adaptam ao seu momento, mantendo a percepção do ambiente ao seu redor.</p>
       </div>
-      <div class="media-preview fade-up" data-fade>
-        <video muted autoplay loop playsinline src="VideoMusica.mp4" poster="assets/music-poster.jpg"></video>
-      </div>
-    </section>
-
-    <!-- Compartilhar -->
-    <section id="share" class="container">
-      <div class="fade-up" data-fade>
-        <h2>Compartilhe seu ponto de vista de forma eficaz</h2>
-        <p class="lead">Leve uma nova perspectiva às suas ligações de vídeo usando a câmera dos óculos para compartilhar
-          o que você está vendo. Garanta um áudio de melhor qualidade bloqueando até 90% dos ruídos de fundo durante as
-          ligações.</p>
-      </div>
-      <div class="media-preview fade-up" data-fade>
-        <video muted autoplay loop playsinline src="VideoSeupontoDeVista.mp4" poster="assets/share-poster.jpg"></video>
+      <div class="media-preview media-square fade-up" data-fade>
+        <img src="geracaotres/im5.webp" alt="Pessoa ouvindo música com os óculos Ray-Ban Meta" loading="lazy">
       </div>
     </section>
 
-<!-- Modelos Ray-Ban Meta -->
-<section id="models" class="container">
-  <div class="fade-up" data-fade>
-    <h2>Confira as novidades Ray-Ban Meta</h2>
-  </div>
-
-  <div class="models-grid" style="margin-top:28px">
-    <div class="model-card fade-up" data-fade>
-      <img src="Viajante.webp" alt="Ray-Ban Meta Wayfarer">
-      <h3>Wayfarer (Geração 2)</h3>
-      <a href="wayfarer.html" class="btn primary">Saiba mais</a>
-    </div>
-
-    <div class="model-card fade-up" data-fade>
-      <img src="skyler.webp" alt="Ray-Ban Meta Skyler">
-      <h3>Skyler (Geração 2)</h3>
-      <a href="skyler.html" class="btn primary">Saiba mais</a>
-    </div>
-
-    <div class="model-card fade-up" data-fade>
-      <img src="headliner.webp" alt="Ray-Ban Meta Headliner">
-      <h3>Headliner (Geração 2)</h3>
-      <a href="headliner.html" class="btn primary">Saiba mais</a>
-    </div>
-  </div>
-</section>
-
-
-
-
-    <!-- Hey Meta / Vídeo integrado -->
-    <section id="ai" class="container hey-meta">
+    <!-- MANTENHA-SE CONECTADO -->
+    <section id="connect" class="container connect section-alt">
       <div class="fade-up" data-fade>
-        <h2>Hey Meta, me fale sobre sua arquitetura</h2>
-        <p class="lead">Pergunte, traduza, receba sugestões e lembretes em tempo real com a Meta AI. Peça aos óculos
-          informações sobre pontos turísticos, rotas, insights e mais.</p>
+        <h2>Mantenha-se conectado com mais facilidade do que nunca</h2>
+        <p class="lead">Alto-falantes discretos de ouvido aberto permitem que você atenda chamadas que só você ouvirá e
+          envie e receba mensagens em diversos aplicativos, tudo sem usar as mãos.</p>
       </div>
 
-      <div class="media-preview fade-up" data-fade>
-        <video id="aiVideo" muted autoplay loop playsinline src="videoCabeloRosa.mp4"
-          poster="assets/ai-poster.jpg"></video>
-        <div class="video-controls">
-          <button id="playPause">⏯️</button>
-          <button id="muteUnmute">🔊</button>
+      <div class="connect-grid">
+        <article class="connect-card fade-up" data-fade>
+          <img src="geracaotres/img4.webp" alt="Pessoa enviando mensagem de voz pelos óculos" loading="lazy">
+
+          <div class="connect-copy">
+            <small>Mensagens de texto sem usar as mãos</small>
+            <h3>Envie mensagens de texto e de voz.</h3>
+          </div>
+        </article>
+
+        <article class="connect-card fade-up" data-fade>
+          <img src="geracaotres/img3.webp" alt="Pessoa atendendo uma chamada pelos óculos" loading="lazy">
+
+          <div class="connect-copy">
+            <small>Chamadas em modo mãos-livres</small>
+            <h3>Atenda chamadas diretamente dos seus óculos com IA.</h3>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- MODELOS -->
+    <section id="models" class="container">
+      <div class="fade-up" data-fade>
+        <h2>Confira as novidades Ray-Ban Meta</h2>
+      </div>
+
+      <div class="models-grid">
+        <div class="model-card fade-up" data-fade>
+          <img src="geracaotres/way.avif" alt="Ray-Ban Meta Wayfarer" loading="lazy">
+          <h3>Wayfarer (Geração 3)</h3>
+          <a href="wayfarer.html" class="btn primary">Saiba mais</a>
+        </div>
+
+        <div class="model-card fade-up" data-fade>
+          <img src="geracaotres/zena.avif" alt="Ray-Ban Meta Skyler" loading="lazy">
+          <h3>Skyler (Geração 3)</h3>
+          <a href="skyler.html" class="btn primary">Saiba mais</a>
+        </div>
+
+        <div class="model-card fade-up" data-fade>
+          <img src="geracaotres/aviator.avif" alt="Ray-Ban Meta Headliner" loading="lazy">
+          <h3>Headliner (Geração 3)</h3>
+          <a href="headliner.html" class="btn primary">Saiba mais</a>
         </div>
       </div>
     </section>
-    <script>
-      const video = document.getElementById('aiVideo');
-      const playPauseBtn = document.getElementById('playPause');
-      const muteUnmuteBtn = document.getElementById('muteUnmute');
 
-      playPauseBtn.addEventListener('click', () => {
-        if (video.paused) video.play();
-        else video.pause();
-      });
+    <!-- META AI -->
+    <section id="ai" class="container hey-meta section-alt">
+      <div class="fade-up" data-fade>
+        <svg class="meta-mark" viewBox="0 0 48 48" aria-hidden="true">
+          <defs>
+            <linearGradient id="metaGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#e040fb" />
+              <stop offset="1" stop-color="#4f46e5" />
+            </linearGradient>
+          </defs>
+          <g fill="url(#metaGrad)">
+            <ellipse cx="24" cy="9" rx="3.4" ry="5.4" />
+            <ellipse cx="24" cy="9" rx="3.4" ry="5.4" transform="rotate(45 24 24)" />
+            <ellipse cx="24" cy="9" rx="3.4" ry="5.4" transform="rotate(90 24 24)" />
+            <ellipse cx="24" cy="9" rx="3.4" ry="5.4" transform="rotate(135 24 24)" />
+            <ellipse cx="24" cy="9" rx="3.4" ry="5.4" transform="rotate(180 24 24)" />
+            <ellipse cx="24" cy="9" rx="3.4" ry="5.4" transform="rotate(225 24 24)" />
+            <ellipse cx="24" cy="9" rx="3.4" ry="5.4" transform="rotate(270 24 24)" />
+            <ellipse cx="24" cy="9" rx="3.4" ry="5.4" transform="rotate(315 24 24)" />
+          </g>
+        </svg>
+        <h2>“Ei, Meta”</h2>
+        <p class="hey-sub">O que eu não posso perder nesta cidade?</p>
+      </div>
 
-      muteUnmuteBtn.addEventListener('click', () => {
-        video.muted = !video.muted;
-      });
-    </script>
+      <div class="prompt-stage fade-up" data-fade>
+        <ul class="prompt-lines" aria-hidden="true">
+          <li>traduza esta placa, sugira um acompanhamento para o salmão,</li>
+          <li>me lembre de sair mais cedo do trabalho para a peça do meu filho,</li>
+          <li>identifique este ingrediente e sugira uma receita vegetariana,</li>
+          <li>me diga como pedir um café em francês,</li>
+          <li>me dê a previsão do tempo de amanhã e ligue para a vovó,</li>
+          <li>me lembre de desligar o forno,</li>
+          <li>diga a que horas preciso sair para chegar ao aeroporto,</li>
+          <li>identifique o nome deste hotel,</li>
+          <li>sugira uma atividade divertida para as crianças,</li>
+          <li>me lembre de buscar mamãe e papai no aeroporto hoje à noite</li>
+        </ul>
 
+        <div class="prompt-video">
+          <video id="aiVideo" muted loop playsinline preload="metadata" data-autoplay
+            src="geracaotres/Meta 1.mp4"></video>
+          <div class="video-controls">
+            <button id="playPause" type="button" aria-label="Pausar vídeo">⏸</button>
+            <button id="muteUnmute" type="button" aria-label="Ativar som">🔇</button>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- Estilo e inovação (hotspots no óculos) -->
-<section id="style" class="container">
-  <div class="fade-up" data-fade>
-    <h2>Os AI glasses mais estilosos, ainda melhores</h2>
-    <p class="lead">Veja como os óculos Ray-Ban Meta combinam estilo atemporal com tecnologia de ponta.</p>
-  </div>
-  <div class="media-preview fade-up hotspot-container" data-fade>
-    <img src="raybanOculos.webp" alt="Modelo Ray-Ban com hotspots">
+    <!-- PERGUNTE AOS ÓCULOS (3 cards) -->
+    <section id="capture" class="container">
+      <div class="fade-up" data-fade>
+        <h2>Pergunte qualquer coisa aos seus óculos com “Hey Meta”</h2>
+        <p class="lead">Converse com a Meta AI para obter sugestões, respostas, lembretes e muito mais.</p>
+      </div>
 
-    <div class="hotspot" style="top: 40%; left: 24%;">
-      <span class="hotspot-icon">+</span>
-      <span class="hotspot-info">Touchpad</span>
-    </div>
+      <div class="capture-grid">
+        <article class="capture-card fade-up" data-fade>
+          <img src="geracaotres/fml.webp" alt="Receba recomendações" loading="lazy">
+          <h3>Receba recomendações</h3>
+        </article>
 
-    <div class="hotspot" style="top: 45%; left: 35%;">
-      <span class="hotspot-icon">+</span>
-      <span class="hotspot-info">Botão de Captura</span>
-    </div>
+        <article class="capture-card fade-up" data-fade>
+          <img src="geracaotres/traduzir.webp" alt="Traduzir conversas e textos" loading="lazy">
+          <h3>Traduzir conversas e textos</h3>
+        </article>
 
-    <div class="hotspot" style="top: 55%; left: 54%;">
-      <span class="hotspot-icon">+</span>
-      <span class="hotspot-info">Resolução 3K Ultra HD</span>
-    </div>
+        <article class="capture-card fade-up" data-fade>
+          <img src="geracaotres/kids.webp" alt="Pergunte qualquer coisa" loading="lazy">
+          <h3>Pergunte qualquer coisa</h3>
+        </article>
+      </div>
+    </section>
 
-    <div class="hotspot" style="top: 5%; left: 63%;">
-      <span class="hotspot-icon">+</span>
-      <span class="hotspot-info">Alto-falanteS open-ear</span>
-    </div>
+    <!-- ESTILO (hotspots) -->
+    <section id="style" class="container section-alt">
+      <div class="fade-up" data-fade>
+        <h2>Os AI glasses mais estilosos, ainda melhores</h2>
+        <p class="lead">Veja como os óculos Ray-Ban Meta combinam estilo atemporal com tecnologia de ponta.</p>
+      </div>
 
-    <div class="hotspot" style="top: 12%; left: 87%;">
-      <span class="hotspot-icon">+</span>
-      <span class="hotspot-info">Maior duração da bateria</span>
-    </div>
-  </div>
-</section>
+      <div class="media-preview fade-up hotspot-container" data-fade>
+        <img src="geracaotres/ocl.webp" alt="Óculos Ray-Ban Meta com destaques dos recursos" loading="lazy">
 
-    <!-- Controle / App / Privacidade / Acessibilidade -->
+        <button type="button" class="hotspot" style="top:40%; left:24%;" aria-label="Touchpad">
+          <span class="hotspot-icon" aria-hidden="true">+</span>
+          <span class="hotspot-info">Touchpad</span>
+        </button>
+
+        <button type="button" class="hotspot" style="top:45%; left:35%;" aria-label="Botão de captura">
+          <span class="hotspot-icon" aria-hidden="true">+</span>
+          <span class="hotspot-info">Botão de captura</span>
+        </button>
+
+        <button type="button" class="hotspot" style="top:55%; left:54%;" aria-label="Resolução 3K Ultra HD">
+          <span class="hotspot-icon" aria-hidden="true">+</span>
+          <span class="hotspot-info">Resolução 3K Ultra HD</span>
+        </button>
+
+        <button type="button" class="hotspot" style="top:8%; left:63%;" aria-label="Alto-falantes open-ear">
+          <span class="hotspot-icon" aria-hidden="true">+</span>
+          <span class="hotspot-info">Alto-falantes open-ear</span>
+        </button>
+
+        <button type="button" class="hotspot" style="top:14%; left:87%;" aria-label="Maior duração da bateria">
+          <span class="hotspot-icon" aria-hidden="true">+</span>
+          <span class="hotspot-info">Maior duração da bateria</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- CONTROLE -->
     <section id="control" class="container">
       <div class="fade-up" data-fade>
         <h2>Você está no controle da sua experiência</h2>
       </div>
+
       <div class="grid cols-3" style="margin-top:28px">
         <div class="card fade-up" data-fade>
-          <img src="metaApp.webp" alt="App Meta">
+          <img src="geracaotres/web.webp" alt="Aplicativo Meta AI" loading="lazy">
           <h3>Meta AI app</h3>
           <p class="muted">Use o app Meta para gerenciar seus óculos, personalizar configurações e pedidos de linguagem
             da AI.</p>
         </div>
         <div class="card fade-up" data-fade>
-          <img src="privacidade22.webp" alt="Privacidade">
+          <img src="geracaotres/pv.webp" alt="Recursos de privacidade" loading="lazy">
           <h3>Privacidade</h3>
           <p class="muted">Indicação visual de gravação, desligamento manual de câmera e controle total sobre seus
             dados.</p>
         </div>
         <div class="card fade-up" data-fade>
-          <img src="Acessibilidade2.webp" alt="Acessibilidade">
-          <h3>Accessibilidade</h3>
+          <img src="geracaotres/oc.webp" alt="Recursos de acessibilidade" loading="lazy">
+          <h3>Acessibilidade</h3>
           <p class="muted">Recursos de acessibilidade integrados para pessoas com diferentes necessidades visuais e
             auditivas.</p>
         </div>
       </div>
     </section>
 
-    <!-- CTA final -->
-<section id="buy" class="cta">
-  <h2>Pronto para experimentar?</h2>
-  <p>Compre o Ray-Ban Meta agora — escolha modelo, cor e lentes para levar sua perspectiva ao próximo nível.</p>
-  <div class="btn-group">
-    <a class="btn primary"
-      href="https://wa.me/557734296068?text=Olá,%20gostaria%20de%20comprar%20o%20Ray-Ban%20Meta%20">Comprar agora</a>
-  </div>
-</section>
+    <!-- CTA FINAL -->
+    <section id="buy" class="cta">
+      <h2>Pronto para experimentar?</h2>
+      <p>Compre o Ray-Ban Meta agora: escolha modelo, cor e lentes para levar sua perspectiva ao próximo nível.</p>
+      <div class="btn-group">
+        <a class="btn primary"
+          href="https://wa.me/557734296068?text=Ol%C3%A1%2C%20gostaria%20de%20comprar%20o%20Ray-Ban%20Meta">Comprar
+          agora</a>
+      </div>
+    </section>
 
   </main>
 
-  <!-- RODAPÉ -->
   <footer>
-    <div class="container">
-      <p>© 2025 Mercadotica. Todos os direitos reservados.</p>
-      <div><a href="#">Política de Privacidade</a> • <a href="#">Termos de Uso</a></div>
-    </div>
+    <p>© <span id="year">2025</span> Mercadótica. Todos os direitos reservados.</p>
   </footer>
 
+  <!-- BOTÃO FLUTUANTE DO WHATSAPP (bolinha branca, ícone azul) -->
+  <a class="whatsapp-float" target="_blank" rel="noopener" aria-label="Falar com a Mercadótica no WhatsApp"
+    href="https://wa.me/557734296068?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20Ray-Ban%20Meta">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+    </svg>
+  </a>
+
   <script>
-    // Scroll reveal (fade-up)
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('in');
-          observer.unobserve(entry.target);
+    (function () {
+      // ===== Ano do rodapé =====
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // ===== Vídeo da capa: versão mobile (até 768px) =====
+      // Se o arquivo mobile não existir, volta sozinho para o vídeo normal.
+      var mq = window.matchMedia('(max-width: 768px)');
+      var mobileVideos = document.querySelectorAll('video[data-mobile-src]');
+
+      mobileVideos.forEach(function (v) {
+        v.dataset.desktopSrc = v.getAttribute('src');
+        v.addEventListener('error', function () {
+          if (v.dataset.fallback) return;
+          v.dataset.fallback = '1';
+          v.setAttribute('src', v.dataset.desktopSrc);
+          v.load();
+          if (v.autoplay) v.play().catch(function () { });
+        });
+      });
+
+      function applyVideoSources() {
+        mobileVideos.forEach(function (v) {
+          var want = (mq.matches && !v.dataset.fallback) ? v.dataset.mobileSrc : v.dataset.desktopSrc;
+          if (v.getAttribute('src') === want) return;
+          var wasPlaying = !v.paused;
+          v.setAttribute('src', want);
+          v.load();
+          if (wasPlaying || v.autoplay) v.play().catch(function () { });
+        });
+      }
+      applyVideoSources();
+      if (mq.addEventListener) mq.addEventListener('change', applyVideoSources);
+      else if (mq.addListener) mq.addListener(applyVideoSources);
+
+      // ===== Entrada suave das seções =====
+      var fadeObs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in');
+            fadeObs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      document.querySelectorAll('[data-fade]').forEach(function (el) { fadeObs.observe(el); });
+
+      // ===== Vídeos tocam só quando aparecem na tela =====
+      var vidObs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          var v = entry.target;
+          if (entry.isIntersecting) {
+            if (!v.dataset.userPaused) v.play().catch(function () { });
+          } else {
+            v.pause();
+          }
+        });
+      }, { threshold: 0.4 });
+      document.querySelectorAll('video[data-autoplay]').forEach(function (v) { vidObs.observe(v); });
+
+      // Pausa o vídeo do topo quando a aba fica inativa
+      var heroVideo = document.querySelector('.hero video');
+      document.addEventListener('visibilitychange', function () {
+        if (!heroVideo) return;
+        if (document.hidden) heroVideo.pause();
+        else heroVideo.play().catch(function () { });
+      });
+
+      // ===== Controles do vídeo da Meta AI =====
+      var aiVideo = document.getElementById('aiVideo');
+      var playBtn = document.getElementById('playPause');
+      var muteBtn = document.getElementById('muteUnmute');
+
+      playBtn.addEventListener('click', function () {
+        if (aiVideo.paused) {
+          delete aiVideo.dataset.userPaused;
+          aiVideo.play().catch(function () { });
+          playBtn.textContent = '⏸';
+          playBtn.setAttribute('aria-label', 'Pausar vídeo');
+        } else {
+          aiVideo.dataset.userPaused = '1';
+          aiVideo.pause();
+          playBtn.textContent = '▶';
+          playBtn.setAttribute('aria-label', 'Reproduzir vídeo');
         }
       });
-    }, { threshold: 0.12 });
-    document.querySelectorAll('[data-fade]').forEach(el => observer.observe(el));
 
-    // Vídeos autoplay quando entram em viewport
-    const vids = document.querySelectorAll('video[data-autoplay]');
-    const vidObs = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        const v = entry.target;
-        if (entry.isIntersecting) v.play().catch(() => { }); else v.pause();
-      });
-    }, { threshold: 0.4 });
-    vids.forEach(v => vidObs.observe(v));
-
-    // Pausar vídeo principal quando aba inativa
-    document.addEventListener('visibilitychange', () => {
-      const v0 = document.querySelector('video');
-      if (!v0) return;
-      if (document.hidden) v0.pause();
-      else v0.play().catch(() => { });
-    });
-  </script>
-<script>
-  // Ativar hotspots por toque no celular
-  document.querySelectorAll('.hotspot').forEach(hotspot => {
-    hotspot.addEventListener('click', function (e) {
-      e.stopPropagation();
-
-      // Fecha todos os outros antes de abrir o atual
-      document.querySelectorAll('.hotspot.active').forEach(h => {
-        if (h !== this) h.classList.remove('active');
+      muteBtn.addEventListener('click', function () {
+        aiVideo.muted = !aiVideo.muted;
+        muteBtn.textContent = aiVideo.muted ? '🔇' : '🔊';
+        muteBtn.setAttribute('aria-label', aiVideo.muted ? 'Ativar som' : 'Desativar som');
       });
 
-      // Alterna apenas o clicado
-      this.classList.toggle('active');
-    });
-  });
+      // ===== Hotspots (toque no celular, hover/foco no desktop) =====
+      var hotspots = document.querySelectorAll('.hotspot');
+      hotspots.forEach(function (h) {
+        h.addEventListener('click', function (e) {
+          e.stopPropagation();
+          var wasActive = h.classList.contains('active');
+          hotspots.forEach(function (o) { o.classList.remove('active'); });
+          if (!wasActive) h.classList.add('active');
+        });
+      });
+      document.addEventListener('click', function () {
+        hotspots.forEach(function (h) { h.classList.remove('active'); });
+      });
 
-  // Fecha todos ao clicar fora
-  document.addEventListener('click', function (e) {
-    if (!e.target.closest('.hotspot')) {
-      document.querySelectorAll('.hotspot.active').forEach(h => h.classList.remove('active'));
-    }
-  });
-</script>
-<script>
-  // Ajusta posição automática do tooltip se estiver perto da borda
-  function adjustTooltipPositions() {
-    document.querySelectorAll('.hotspot').forEach(hotspot => {
-      const info = hotspot.querySelector('.hotspot-info');
-      if (!info) return;
-
-      // Reseta alinhamento
-      info.removeAttribute('data-align');
-
-      const rect = hotspot.getBoundingClientRect();
-      const screenWidth = window.innerWidth;
-
-      if (rect.left < 80) {
-        info.setAttribute('data-align', 'left');
-      } else if (screenWidth - rect.right < 80) {
-        info.setAttribute('data-align', 'right');
+      // Mantém o tooltip dentro da tela quando o ponto está perto da borda
+      function adjustTooltips() {
+        hotspots.forEach(function (h) {
+          var info = h.querySelector('.hotspot-info');
+          info.removeAttribute('data-align');
+          var r = h.getBoundingClientRect();
+          var half = Math.min(info.scrollWidth, 200) / 2 + 12;
+          if (r.left + r.width / 2 < half) info.setAttribute('data-align', 'left');
+          else if (window.innerWidth - (r.left + r.width / 2) < half) info.setAttribute('data-align', 'right');
+        });
       }
-    });
-  }
-
-  // Reajusta quando carrega e ao redimensionar
-  window.addEventListener('load', adjustTooltipPositions);
-  window.addEventListener('resize', adjustTooltipPositions);
-</script>
-
+      window.addEventListener('load', adjustTooltips);
+      window.addEventListener('resize', adjustTooltips);
+    })();
+  </script>
 
 </body>
 

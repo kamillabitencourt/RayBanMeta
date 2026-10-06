@@ -4,10 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ray-Ban Meta | Skyler</title>
+    <title>Ray-Ban Meta | Zena</title>
 
     <link rel="stylesheet" href="stylesRay.css">
-
 </head>
 
 <body>
@@ -21,7 +20,6 @@
                 <li><a href="index.html">Início</a></li>
                 <li><a href="#caracteristicas">Características</a></li>
                 <li><a href="#detalhes">Detalhes</a></li>
-
             </ul>
         </nav>
     </header>
@@ -33,7 +31,7 @@
             <div class="produto-container">
                 <div class="galeria-produto">
                     <div class="imagem-principal-container">
-                        <img id="imagem-principal" src="pretos1.webp" alt="Ray-Ban Meta Skyler Brilhante Preto">
+                        <img id="imagem-principal" src="pretos1.webp" alt="Ray-Ban Meta Zena Brilhante Preto - Cinza">
                     </div>
                     <div class="miniaturas" id="miniaturas-galeria">
                     </div>
@@ -42,53 +40,75 @@
 
             <div class="side-info-panel">
                 <div class="produto-info">
-                    <h1>Ray-Ban Meta Skyler</h1>
+                    <h1>Ray-Ban Meta Zena</h1>
                     <p class="tag-novo">NOVO</p>
 
                     <p class="cor-selecionada-texto">
                         <strong>Cor da Armação:</strong> <span id="cor-selecionada-nome">Brilhante Preto</span><br>
-                        <strong>Lente:</strong> <span id="lente-selecionada-nome">Verificar lentes disponíveis</span>
+                        <strong>Lente:</strong> <span id="lente-selecionada-nome">Cinza (Cor uniforme)</span>
                     </p>
 
                     <div class="modelos-opcoes">
 
                         <div class="opcoes-grupo">
-                            <label for="cores-lista">Cor da Armação</label>
+                            <label for="cores-lista">Modelos e Lentes Disponíveis (7 Opções)</label>
                             <div class="opcoes-lista cores-lista" id="cores-lista">
 
-                                <div class="opcao-item opcao-cor selected" data-cor="Brilhante Preto"
-                                    data-lente-padrao="Transitions" onclick="selecionarCor(this)">
-                                    <div class="cor-mini" style="background-color: #000000;"></div>
+                                <!-- 1. RW4015 601/87 - R$ 3.699,00 -->
+                                <div class="opcao-item opcao-cor selected" data-id="601-87" onclick="selecionarModelo('601-87', this)">
+                                    <div class="cor-mini" style="background-color: #000000;" title="Brilhante Preto - Lente Cinza (R$ 3.699,00)"></div>
                                 </div>
 
-                                <div class="opcao-item opcao-cor" data-cor="Brilhante Cinza Esbranquiçado"
-                                    data-lente-padrao="Transitions" onclick="selecionarCor(this)">
-                                    <div class="cor-mini" style="background-color: #87878e;"></div>
+                                <!-- 2. RW4015 601/SB - R$ 3.699,00 -->
+                                <div class="opcao-item opcao-cor" data-id="601-SB" onclick="selecionarModelo('601-SB', this)">
+                                    <div class="cor-mini" style="background-color: #1a1a1a; border: 2px solid #4a90e2;" title="Brilhante Preto - Filtro Luz Azul-Violeta (R$ 3.699,00)"></div>
                                 </div>
 
-                                <div class="opcao-item opcao-cor" data-cor="Brilhante Violeta Mística"
-                                    data-lente-padrao="Transitions" onclick="selecionarCor(this)">
-                                    <div class="cor-mini" style="background-color: #210222;"></div>
+                                <!-- 3. RW4015 601/1M - R$ 4.189,00 -->
+                                <div class="opcao-item opcao-cor" data-id="601-1M" onclick="selecionarModelo('601-1M', this)">
+                                    <div class="cor-mini" style="background-color: #0d3b1e;" title="Brilhante Preto - Transitions® Verde (R$ 4.189,00)"></div>
                                 </div>
+
+                                <!-- 4. RW4015 601/9A - R$ 3.879,00 -->
+                                <div class="opcao-item opcao-cor" data-id="601-9A" onclick="selecionarModelo('601-9A', this)">
+                                    <div class="cor-mini" style="background-color: #2e4d32;" title="Brilhante Preto - Verde Polarizado (R$ 3.879,00)"></div>
+                                </div>
+
+                                <!-- 5. RW4015 690513 - Em breve -->
+                                <div class="opcao-item opcao-cor" data-id="690513" onclick="selecionarModelo('690513', this)">
+                                    <div class="cor-mini" style="background-color: #583318;" title="Polido Havana - Marrom Degradê (Em Breve)"></div>
+                                </div>
+
+                                <!-- 6. RW4015 691410 - Em breve -->
+                                <div class="opcao-item opcao-cor" data-id="691410" onclick="selecionarModelo('691410', this)">
+                                    <div class="cor-mini" style="background-color: #bfa8be;" title="Polido Cinza Lilás Leitoso - Transitions® Cobre (Em Breve)"></div>
+                                </div>
+
+                                <!-- 7. RW4015 69161Z - Em breve -->
+                                <div class="opcao-item opcao-cor" data-id="69161Z" onclick="selecionarModelo('69161Z', this)">
+                                    <div class="cor-mini" style="background-color: #e8c5c8;" title="Polido Rosa Blush Leitoso - Transitions® Cinza (Em Breve)"></div>
+                                </div>
+
                             </div>
                         </div>
 
                         <div class="opcoes-grupo">
-                            <label for="btn-verificar-lentes">Tipo de Lente</label>
+                            <label for="btn-verificar-lentes">Atendimento Personalizado</label>
                             <a id="btn-verificar-lentes"
-                                href="https://wa.me/557734296068?text=Olá,%20gostaria%20de%20verificar%20as%20lentes%20disponíveis%20para%20o%20Ray-Ban%20Meta%20Skyler%20na%20cor%20[COR_SELECIONADA]"
+                                href="https://wa.me/557734296068?text=Olá,%20gostaria%20de%20tirar%20dúvidas%20sobre%20o%20Ray-Ban%20Meta%20Zena%20(RW4015%20601/87)"
                                 target="_blank" class="btn-verificar-lentes">
-                                VERIFICAR LENTES DISPONÍVEIS
+                                VERIFICAR LENTES E SOB MEDIDA
                             </a>
                         </div>
 
                     </div>
-                    <p class="preco">R$ 3.299,00</p>
-                    <a href="https://wa.me/557734296068?text=Olá,%20quero%20comprar%20o%20Ray-Ban%20Meta%20Skyler%20[COR_SELECIONADA]"
+
+                    <p class="preco" id="preco-exibicao">R$ 3.699,00</p>
+
+                    <a href="https://wa.me/557734296068?text=Olá,%20quero%20comprar%20o%20Ray-Ban%20Meta%20Zena%20(RW4015%20601/87)"
                         target="_blank" class="btn-comprar" id="btn-comprar">COMPRE AGORA</a>
 
-                    <p class="descricao">Óculos inteligentes que capturam sua perspectiva, tocam som e conectam você ao
-                        mundo — tudo com o estilo icônico Ray-Ban e a inteligência Meta.</p>
+                    <p class="descricao">O Zena. Modelo gatinho marcante, reinventado com Meta AI. A nova geração de óculos com IA traz um design mais fino, câmera de 12 MP com gravação de vídeo Meta 3K Ultra HD e até 9 horas de duração da bateria. Dê um toque especial ao seu visual com um estilo arrojado e IA.</p>
                 </div>
             </div>
 
@@ -99,10 +119,10 @@
             <div class="meta-ai-cards">
                 <div class="meta-card">
                     <video autoplay muted loop playsinline>
-                        <source src="videoCabeloRosa.mp4" type="video/webm">
+                        <source src="geracaodois/wayfarer/METAIA.mp4" type="video/webm">
                     </video>
                     <div class="meta-card-text">
-                        <h3>Meta AI</h3>
+                        <h3>Meta IA</h3>
                         <p>Converse com a Meta AI para obter sugestões e respostas em tempo real. Pergunte aos seus
                             óculos sobre pontos turísticos, receitas enquanto estiver em movimento, e até mesmo para
                             lembrá-lo de onde estacionou.</p>
@@ -111,55 +131,50 @@
 
                 <div class="meta-card">
                     <video autoplay muted loop playsinline>
-                        <source src="video2.mp4" type="video/mp4">
+                        <source src="geracaodois/wayfarer/CAPTURE.mp4" type="video/mp4">
                     </video>
                     <div class="meta-card-text">
                         <h3>CAPTURE</h3>
                         <p>Capture o que você vê e ouve sem precisar tirar seu telefone do bolso. A câmera ultrawide de
-                            12 MP e o sistema de cinco microfones capturam vídeos com precisão e clareza. Você pode
-                            gravar vídeos em 3K Ultra HD para a mais alta resolução.</p>
+                            12 MP e o sistema de seis microfones capturam vídeos com precisão e clareza em 3K Ultra HD.</p>
                     </div>
                 </div>
 
                 <div class="meta-card">
                     <video autoplay muted loop playsinline>
-                        <source src="videoPraia.mp4" type="video/mp4">
+                        <source src="geracaodois/wayfarer/OUÇA.mp4" type="video/mp4">
                     </video>
                     <div class="meta-card-text">
                         <h3>OUÇA</h3>
                         <p>Alto-falantes embutidos nas hastes dos óculos entregam som que apenas você pode ouvir,
-                            enquanto 5 microfones capturam áudio nítido para chamadas. Os alto-falantes open-ear
-                            discretos oferecem áudio rico e de qualidade sem bloquear conversas.</p>
+                            enquanto 6 microfones capturam áudio nítido para chamadas e comandos de voz.</p>
                     </div>
                 </div>
 
                 <div class="meta-card">
                     <video autoplay muted loop playsinline>
-                        <source src="videoAudio.mp4" type="video/mp4">
+                        <source src="geracaodois/wayfarer/CONTROLE.mp4" type="video/mp4">
                     </video>
                     <div class="meta-card-text">
-                        <h3>COMUNICAÇÃO MÃOS-LIVRES</h3>
+                        <h3>CONTROLES</h3>
                         <p>Atenda chamadas de vídeo, envie mensagens de texto ou de voz e faça ligações telefônicas—tudo
-                            com as mãos livres. Obtenha o seu melhor som em chamadas com 90% do ruído de fundo
-                            bloqueado.</p>
+                            com as mãos livres.</p>
                     </div>
                 </div>
 
                 <div class="meta-card">
                     <video autoplay muted loop playsinline>
-                        <source src="VideoEstojo.mp4" type="video/mp4">
+                        <source src="geracaodois/wayfarer/BATERIA.mp4" type="video/mp4">
                     </video>
                     <div class="meta-card-text">
-                        <h3>ESTOJO DE RECARGA</h3>
-                        <p>Desfrute de até 8 horas de duração da bateria com uma única carga, além de 48 horas
-                            adicionais com o estojo de recarga totalmente carregado. Carregue até 50% em apenas 20
-                            minutos.</p>
+                        <h3>MAIOR DURAÇÃO DA BATERIA</h3>
+                        <p>Desfrute de até 9 horas de duração da bateria com uma única carga. Carregamento prático através do estojo inteligente.</p>
                     </div>
                 </div>
 
                 <div class="meta-card">
                     <video autoplay muted loop playsinline>
-                        <source src="VideoApp.webm" type="video/mp4">
+                        <source src="geracaodois/wayfarer/APP.mp4" type="video/mp4">
                     </video>
                     <div class="meta-card-text">
                         <h3>APLICATIVO META VIEW</h3>
@@ -182,23 +197,23 @@
                     <table>
                         <tr>
                             <th>Código do modelo</th>
-                            <td id="detalhe-cod-modelo">RW4012 601/SB 52-20</td>
+                            <td id="detalhe-cod-modelo">RW4015 601/87 49-22</td>
                         </tr>
                         <tr>
                             <th>Formato da armação</th>
-                            <td>Gatinho (Skyler Gen 2)</td>
+                            <td>Gatinho</td>
                         </tr>
                         <tr>
                             <th>Cor da armação</th>
                             <td id="detalhe-cor-armacao">Brilhante Preto</td>
                         </tr>
                         <tr>
-                            <th>Tipo de material da armação</th>
+                            <th>Material da armação</th>
                             <td>Injetado</td>
                         </tr>
                         <tr>
-                            <th>Cor da haste</th>
-                            <td>Preto</td>
+                            <th>Cor das hastes</th>
+                            <td id="detalhe-cor-haste">Preto</td>
                         </tr>
                     </table>
                 </div>
@@ -210,16 +225,16 @@
                     </div>
                     <table>
                         <tr>
-                            <th>Cor e Tipo de Lente</th>
-                            <td id="detalhe-cor-tipo-lente">Verifique disponibilidade via WhatsApp</td>
+                            <th>Cor da lente</th>
+                            <td id="detalhe-cor-lente">Cinza</td>
                         </tr>
                         <tr>
-                            <th>Tratamento das lentes</th>
-                            <td id="detalhe-tratamento-lente">Verifique disponibilidade via WhatsApp</td>
+                            <th>Tratamento da lente</th>
+                            <td id="detalhe-tratamento-lente">Cor uniforme</td>
                         </tr>
                         <tr>
-                            <th>Preparação para Receita</th>
-                            <td>Aceita receitas de -6.00 a +4.00 (Potência Total)</td>
+                            <th>Categoria da Lente</th>
+                            <td id="detalhe-categoria-lente">3N</td>
                         </tr>
                     </table>
                 </div>
@@ -227,24 +242,28 @@
                 <div class="detalhe-item">
                     <div class="detalhe-titulo">
                         <img src="tamanho_icon.png" alt="Tamanho do Produto">
-                        <h3>Tamanho do Produto (Padrão)</h3>
+                        <h3>Dimensões do Produto</h3>
                     </div>
                     <table>
                         <tr>
                             <th>Tamanho</th>
-                            <td>52 2omm</td>
+                            <td>49 22mm</td>
                         </tr>
                         <tr>
                             <th>Altura da lente</th>
-                            <td>41.9mm (Standard fit)</td>
+                            <td>34.3mm</td>
                         </tr>
                         <tr>
                             <th>Comprimento da haste</th>
                             <td>150mm</td>
                         </tr>
                         <tr>
-                            <th>Cobertura facial</th>
-                            <td>Pequeno, Ponte alta</td>
+                            <th>Ajuste do rosto</th>
+                            <td>Padrão</td>
+                        </tr>
+                        <tr>
+                            <th>Ponte & plaquetas</th>
+                            <td>Ponte alta</td>
                         </tr>
                     </table>
                 </div>
@@ -252,16 +271,16 @@
                 <div class="detalhe-item">
                     <div class="detalhe-titulo">
                         <img src="camera_icon.png" alt="Câmera">
-                        <h3>Câmera (12 MP Ultra-Wide)</h3>
+                        <h3>Câmera</h3>
                     </div>
                     <table>
                         <tr>
-                            <th>Câmera - Imagens</th>
+                            <th>Aquisição de imagens</th>
                             <td>3024x4032px</td>
                         </tr>
                         <tr>
-                            <th>Câmera - Vídeo</th>
-                            <td>3K Ultra HD a 30fps (e 1080p a 60fps)</td>
+                            <th>Captura de vídeo</th>
+                            <td>20p-120fps, 1080p-30fps, 3k-30fps</td>
                         </tr>
                     </table>
                 </div>
@@ -273,12 +292,12 @@
                     </div>
                     <table>
                         <tr>
-                            <th>Áudio</th>
-                            <td>2 alto-falantes Open Ear, 5 microfones</td>
+                            <th>Alto-falante</th>
+                            <td>2 alto-falantes abertos</td>
                         </tr>
                         <tr>
-                            <th>Volume</th>
-                            <td>50% mais alto e 2x mais grave (vs. Gen 1)</td>
+                            <th>Microfone</th>
+                            <td>Array de 6 microfones</td>
                         </tr>
                     </table>
                 </div>
@@ -286,16 +305,16 @@
                 <div class="detalhe-item">
                     <div class="detalhe-titulo">
                         <img src="controles_icon.png" alt="Controles">
-                        <h3>Controles</h3>
+                        <h3>Controles & Assistente</h3>
                     </div>
                     <table>
                         <tr>
-                            <th>Controles</th>
-                            <td>Toque e comando de voz</td>
+                            <th>Toque / Voz</th>
+                            <td>Toque / Controles por voz(2)</td>
                         </tr>
                         <tr>
-                            <th>Assistente</th>
-                            <td>Meta AI</td>
+                            <th>Tipo de assistente</th>
+                            <td>Meta AI(3)</td>
                         </tr>
                     </table>
                 </div>
@@ -308,11 +327,11 @@
                     <table>
                         <tr>
                             <th>Bateria</th>
-                            <td>Recarregável, dura até 8h (48h extras com estojo)</td>
+                            <td>Recarregável (Até 9 horas por carga única)(4)</td>
                         </tr>
                         <tr>
                             <th>Memória</th>
-                            <td>32GB (1000+ Fotos ou 100+ Vídeos 30s)</td>
+                            <td>Armazenamento flash 32GB (1000+ Fotos, 100+ Vídeos de 30s)</td>
                         </tr>
                     </table>
                 </div>
@@ -320,195 +339,244 @@
                 <div class="detalhe-item">
                     <div class="detalhe-titulo">
                         <img src="conectividade_icon.png" alt="Conectividade">
-                        <h3>Conectividade</h3>
+                        <h3>Conectividade & Compatibilidade</h3>
                     </div>
                     <table>
                         <tr>
-                            <th>Conectividade</th>
-                            <td>Wi-Fi 6 | Bluetooth 5.3</td>
+                            <th>Wi-Fi</th>
+                            <td>Wi-Fi 6 Certif</td>
                         </tr>
-                    </table>
-                </div>
-
-                <div class="detalhe-item">
-                    <div class="detalhe-titulo">
-                        <img src="compatibilidade_icon.png" alt="Compatibilidade">
-                        <h3>Compatibilidade</h3>
-                    </div>
-                    <table>
+                        <tr>
+                            <th>Bluetooth</th>
+                            <td>Bluetooth 5.3</td>
+                        </tr>
                         <tr>
                             <th>Compatibilidade</th>
-                            <td>iOS 15.2+ / Android 10+</td>
+                            <td>iOS 17+ / ANDROID 10+ MINIMUM</td>
                         </tr>
                     </table>
                 </div>
             </div>
 
             <div class="legal-text">
-                <p>Armações icônicas que chamam a atenção e uma tecnologia que permite que você navegue sem esforço. Com
-                    seu formato "Gatinho", o **Skyler** nunca fica parado. O favorito de cada geração de influenciadores
-                    culturais, agora ele continua a sua jornada com a avançada Meta AI. Capture fotos e vídeos, ouça
-                    músicas e podcasts, faça chamadas, traduza em tempo real ou mande uma mensagem em tempo
-                    real – tudo isso sem tirar o celular do bolso.</p>
-                <p class="small-print">(1) Algumas funcionalidades podem não estar disponíveis em todas as regiões ou
-                    podem exigir a criação de uma conta Meta e/ou download do aplicativo Meta View. (2) Compatível
-                    apenas com
-                    dispositivos iOS e Android. (3) O assistente Meta AI está disponível em beta em inglês nos EUA e
-                    Canadá. Outros idiomas e regiões podem ser adicionados no futuro. (4) A duração da bateria varia de
-                    acordo
-                    com o uso. (5) Para garantir a qualidade de imagem e vídeo, use os óculos em ambientes bem
-                    iluminados. (6)
-                    A funcionalidade de áudio pode ser limitada em ambientes ruidosos.</p>
+                <p>O Zena. Modelo gatinho marcante, reinventado com Meta AI. A nova geração de óculos com IA traz um design mais fino, câmera de 12 MP com gravação de vídeo Meta 3K Ultra HD e até 9 horas de duração da bateria. Dê um toque especial ao seu visual com um estilo arrojado e IA.</p>
+                <p class="small-print">(1) Algumas funcionalidades podem exigir a criação de uma conta Meta e/ou download do aplicativo Meta View. (2) Compatível apenas com dispositivos iOS e Android mínimos especificados. (3) O assistente Meta AI está disponível conforme regiões suportadas. (4) A duração da bateria pode variar conforme o uso.</p>
             </div>
         </section>
 
     </main>
 
     <footer class="footer" id="contato">
-        <p>&copy; 2025 Mercadótica. Todos os direitos reservados.</p>
+        <p>&copy; 2026 Mercadótica. Todos os direitos reservados.</p>
     </footer>
 
     <script>
-        // Mapeamento de imagens para CADA COR (5 fotos por cor)
+        // Mapeamento com Preços e Status "Em Breve"
         const PRODUTO_DATA = {
-            "Brilhante Preto": {
-                codModelo: "RW4012 601/SB 52-20",
+            "601-87": {
+                codModelo: "RW4015 601/87 49-22",
                 corArmacao: "Brilhante Preto",
+                corHaste: "Preto",
+                corLente: "Cinza",
+                tratamentoLente: "Cor uniforme",
+                categoriaLente: "3N",
+                preco: "R$ 3.699,00",
+                disponivel: true,
                 imagens: [
-                    "pretos1.webp", // Imagem 1 (Principal)
-                    "pretos2.webp", // Imagem 2
-                    "pretos3.webp", // Imagem 3
-                    "pretos4.webp", // Imagem 4
-                    "pretos5.webp" // Imagem 5
+                    "geracaodois/zena/cinza1.webp",
+                    "geracaodois/zena/cinza2.avif",
+                    "geracaodois/zena/cinza3.avif",
+                    "geracaodois/zena/cinza4.avif",
+                    "geracaodois/zena/cinza5.avif"
                 ]
             },
-            "Brilhante Cinza Esbranquiçado": {
-                codModelo: "RW4014 6700MF 52-20",
-                corArmacao: "Brilhante Cinza Esbranquiçado",
+            "601-SB": {
+                codModelo: "RW4015 601/SB 49-22",
+                corArmacao: "Brilhante Preto",
+                corHaste: "Preto",
+                corLente: "Transparente Filtro Luz Azul-Violeta",
+                tratamentoLente: "Cor uniforme",
+                categoriaLente: "0N",
+                preco: "R$ 3.699,00",
+                disponivel: true,
                 imagens: [
-                    "brancos2.webp", // Imagem 1 (Principal)
-                    "brancos1.png", // Imagem 2
-                    "brancos3.webp", // Imagem 3 (Usando imagem de outra cor como exemplo)
-                    "brancos4.webp", // Imagem 4
-                    "brancos5.webp" // Imagem 5
+                    "geracaodois/zena/bsc1.webp",
+                    "geracaodois/zena/bsc2.avif",
+                    "geracaodois/zena/bsc3.avif",
+                    "geracaodois/zena/bsc4.avif",
+                    "geracaodois/zena/bsc5.avif"
                 ]
             },
-            "Brilhante Violeta Mística": {
-                codModelo: "RW4014 6701CH 52-20",
-                corArmacao: "Brilhante Violeta Mística",
+            "601-1M": {
+                codModelo: "RW4015 601/1M 49-22",
+                corArmacao: "Brilhante Preto",
+                corHaste: "Preto",
+                corLente: "Transparente/Verde",
+                tratamentoLente: "Transitions®",
+                categoriaLente: "3F",
+                preco: "R$ 4.189,00",
+                disponivel: true,
                 imagens: [
-                    "roxos1.png", // Imagem 1 (Principal)
-                    "roxos2.png", // Imagem 2
-                    "roxos3.webp", // Imagem 3
-                    "roxos4.webp", // Imagem 4
-                    "roxos5.webp" // Imagem 5 (Usando imagem de outra cor como exemplo)
+                    "geracaodois/zena/pretotr1].webp",
+                    "geracaodois/zena/pretotr2.avif",
+                    "geracaodois/zena/pretotr3.avif",
+                    "geracaodois/zena/pretotr4.avif",
+                    "geracaodois/zena/pretotr5.avif"
+                ]
+            },
+            "601-9A": {
+                codModelo: "RW4015 601/9A 49-22",
+                corArmacao: "Brilhante Preto",
+                corHaste: "Preto",
+                corLente: "Verde polarizado",
+                tratamentoLente: "Cor uniforme",
+                categoriaLente: "3P",
+                preco: "R$ 3.879,00",
+                disponivel: true,
+                imagens: [
+                    "geracaodois/zena/verdep1.webp",
+                    "geracaodois/zena/verdep2.avif",
+                    "geracaodois/zena/verdep3.avif",
+                    "geracaodois/zena/verdep4.avif",
+                    "geracaodois/zena/verdep5.avif"
+                ]
+            },
+            "690513": {
+                codModelo: "RW4015 690513 49-22",
+                corArmacao: "Polido Havana",
+                corHaste: "Havana",
+                corLente: "Marrom degradê",
+                tratamentoLente: "Degradê",
+                categoriaLente: "2N",
+                preco: "Em breve",
+                disponivel: false,
+                imagens: [
+                    "geracaodois/zena/havana1.webp",
+                    "geracaodois/zena/havana2.avif",
+                    "geracaodois/zena/havana3.avif",
+                    "geracaodois/zena/havana4.avif",
+                    "geracaodois/zena/havana5.avif"
+                ]
+            },
+            "691410": {
+                codModelo: "RW4015 691410 49-22",
+                corArmacao: "Polido Cinza Lilás Leitoso",
+                corHaste: "Cinza Lilás Leitoso",
+                corLente: "Transparente/Cobre",
+                tratamentoLente: "Transitions®",
+                categoriaLente: "3F",
+                preco: "Em breve",
+                disponivel: false,
+                imagens: [
+                    "geracaodois/zena/lilas1.avif",
+                    "geracaodois/zena/lilas2.avif",
+                    "geracaodois/zena/lillas3.avif",
+                    "geracaodois/zena/lilas4.avif",
+                    "geracaodois/zena/lilas5.avif"
+                ]
+            },
+            "69161Z": {
+                codModelo: "RW4015 69161Z 49-22",
+                corArmacao: "Polido Rosa Blush Leitoso",
+                corHaste: "Rosado leitoso",
+                corLente: "Transparente/Cinza",
+                tratamentoLente: "Transitions®",
+                categoriaLente: "3F",
+                preco: "Em breve",
+                disponivel: false,
+                imagens: [
+                    "geracaodois/zena/rosa1.avif",
+                    "geracaodois/zena/rosa2.avif",
+                    "geracaodois/zena/rosa3.avif",
+                    "geracaodois/zena/rosa4.avif",
+                    "geracaodois/zena/rosa5.avif"
                 ]
             }
-            // Adicione outras cores aqui se tiver mais de 3
         };
 
-        // CORRIGIDO: Inicialização com a cor 'Brilhante Preto' que está selecionada no HTML
-        let corAtual = "Brilhante Preto";
+        let modeloAtual = "601-87";
 
         document.addEventListener('DOMContentLoaded', () => {
-            // Garante que o estado inicial (imagem, texto de detalhes) é carregado corretamente
             atualizarGaleriaEDetalhes();
         });
 
-        function selecionarCor(elemento) {
-            // 1. Remove a seleção de todos os itens de cor
+        function selecionarModelo(idModelo, elemento) {
             document.querySelectorAll('.opcao-cor').forEach(item => {
                 item.classList.remove('selected');
             });
 
-            // 2. Adiciona a seleção ao item clicado
             elemento.classList.add('selected');
-
-            // 3. Atualiza a variável de estado (remove espaço no final se houver)
-            corAtual = elemento.getAttribute('data-cor').trim();
-
-            // 4. Atualiza a exibição (galeria e detalhes)
+            modeloAtual = idModelo;
             atualizarGaleriaEDetalhes();
         }
 
         function atualizarGaleriaEDetalhes() {
-            const data = PRODUTO_DATA[corAtual];
+            const data = PRODUTO_DATA[modeloAtual];
             const imagemPrincipalElement = document.getElementById('imagem-principal');
             const miniaturasContainer = document.getElementById('miniaturas-galeria');
-            const corNomeCompleto = data ? data.corArmacao : "Indefinida";
 
             if (data) {
-                // --- 1. Atualiza a Galeria (Imagem Principal e Miniaturas) ---
-
-                // A. Troca a Imagem Principal
-                imagemPrincipalElement.style.opacity = '0'; // Esconde para transição
+                // 1. Atualiza Galeria
+                imagemPrincipalElement.style.opacity = '0';
                 setTimeout(() => {
-                    imagemPrincipalElement.src = data.imagens[0]; // Primeira imagem como principal
-                    // CORRIGIDO: Wayfarer -> Skyler
-                    imagemPrincipalElement.alt = `Ray-Ban Meta Skyler ${corNomeCompleto}`;
-                    imagemPrincipalElement.style.opacity = '1'; // Mostra a nova imagem
-                }, 150); // Transição rápida
+                    imagemPrincipalElement.src = data.imagens[0];
+                    imagemPrincipalElement.alt = `Ray-Ban Meta Zena - ${data.codModelo}`;
+                    imagemPrincipalElement.style.opacity = '1';
+                }, 150);
 
-                // B. Popula as Miniaturas
-                miniaturasContainer.innerHTML = ''; // Limpa as miniaturas anteriores
+                miniaturasContainer.innerHTML = '';
                 data.imagens.forEach((imgSrc, index) => {
                     const img = document.createElement('img');
                     img.src = imgSrc;
                     img.onclick = () => mudarImagem(img);
-                    // Apenas a primeira miniatura é selecionada por padrão
-                    if (index === 0) {
-                        img.classList.add('selected');
-                    }
+                    if (index === 0) img.classList.add('selected');
                     miniaturasContainer.appendChild(img);
                 });
 
+                // 2. Atualiza Preço e Botão de Compra/Aviso
+                const precoElement = document.getElementById('preco-exibicao');
+                const btnComprar = document.getElementById('btn-comprar');
+                precoElement.textContent = data.preco;
 
-                // --- 2. Atualiza a Info Principal e Botoes ---
+                if (data.disponivel) {
+                    btnComprar.textContent = "COMPRE AGORA";
+                    btnComprar.style.pointerEvents = "auto";
+                    btnComprar.style.opacity = "1";
+                    const msgComprar = encodeURIComponent(`Olá, quero comprar o Ray-Ban Meta Zena (${data.codModelo})`);
+                    btnComprar.href = `https://wa.me/557734296068?text=${msgComprar}`;
+                } else {
+                    btnComprar.textContent = "AVISE-ME QUANDO CHEGAR";
+                    const msgAvise = encodeURIComponent(`Olá, gostaria de ser avisado quando o Ray-Ban Meta Zena (${data.codModelo}) estiver disponível`);
+                    btnComprar.href = `https://wa.me/557734296068?text=${msgAvise}`;
+                }
 
-                // A. Atualiza o texto na Info Principal (Cor)
-                document.getElementById('cor-selecionada-nome').textContent = corNomeCompleto;
-                // B. A lente e cor de lente permanecem fixas (Verificar lentes disponíveis)
+                // 3. Atualiza Textos das Lentes e Links
+                document.getElementById('cor-selecionada-nome').textContent = data.corArmacao;
+                document.getElementById('lente-selecionada-nome').textContent = `${data.corLente} (${data.tratamentoLente})`;
 
-                // C. Atualiza os links do WhatsApp
-                const linkComprar = document.getElementById('btn-comprar');
                 const linkLentes = document.getElementById('btn-verificar-lentes');
+                const msgLentes = encodeURIComponent(`Olá, gostaria de tirar dúvidas sobre o Ray-Ban Meta Zena (${data.codModelo})`);
+                linkLentes.href = `https://wa.me/557734296068?text=${msgLentes}`;
 
-                const corUrl = encodeURIComponent(corNomeCompleto);
-
-                // CORRIGIDO: Wayfarer -> Skyler
-                linkComprar.href = `https://wa.me/557734296068?text=Olá,%20quero%20comprar%20o%20Ray-Ban%20Meta%20Skyler%20na%20cor%20${corUrl}`;
-                // CORRIGIDO: Wayfarer -> Skyler
-                linkLentes.href = `https://wa.me/557734296068?text=Olá,%20gostaria%20de%20verificar%20as%20lentes%20disponíveis%20para%20o%20Ray-Ban%20Meta%20Skyler%20na%20cor%20${corUrl}`;
-
-
-                // --- 3. Atualiza o painel de Detalhes Técnicos (Armação) ---
-
-                // As informações de lente são fixas em "Verifique disponibilidade via WhatsApp"
+                // 4. Atualiza Tabela de Detalhes Técnicos
                 document.getElementById('detalhe-cod-modelo').textContent = data.codModelo;
-                document.getElementById('detalhe-cor-armacao').textContent = corNomeCompleto;
-                document.getElementById('detalhe-cor-tipo-lente').textContent = "Verifique disponibilidade via WhatsApp";
-                document.getElementById('detalhe-tratamento-lente').textContent = "Verifique disponibilidade via WhatsApp";
-
-
-            } else {
-                console.error(`Combinação de cor não encontrada: ${corAtual}`);
-                // Opcional: define uma imagem de erro/padrão
+                document.getElementById('detalhe-cor-armacao').textContent = data.corArmacao;
+                document.getElementById('detalhe-cor-haste').textContent = data.corHaste;
+                document.getElementById('detalhe-cor-lente').textContent = data.corLente;
+                document.getElementById('detalhe-tratamento-lente').textContent = data.tratamentoLente;
+                document.getElementById('detalhe-categoria-lente').textContent = data.categoriaLente;
             }
         }
 
-        // Função para as Miniaturas da Galeria
         function mudarImagem(miniatura) {
             const imagemPrincipal = document.getElementById('imagem-principal');
 
-            // 1. Remove a seleção das outras miniaturas
             document.querySelectorAll('#miniaturas-galeria img').forEach(img => {
                 img.classList.remove('selected');
             });
 
-            // 2. Adiciona a seleção à miniatura clicada
             miniatura.classList.add('selected');
 
-            // 3. Troca a imagem principal (com transição)
             imagemPrincipal.style.opacity = '0';
             setTimeout(() => {
                 imagemPrincipal.src = miniatura.src;

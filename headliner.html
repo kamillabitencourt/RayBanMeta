@@ -1,109 +1,221 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ray-Ban Meta | Headliner</title>
+    <title>Ray-Ban Meta | Aviator</title>
 
-    <link rel="stylesheet" href="stylesRay.css">
+```
+<link rel="stylesheet" href="stylesRay.css">
+```
 
 </head>
 
 <body>
 
-    <header class="navbar">
-        <div class="logo">
-            <img src="mercadotica.png" alt="Mercadótica Logo">
+```
+<header class="navbar">
+
+    <div class="logo">
+        <img src="mercadotica.png" alt="Mercadótica Logo">
+    </div>
+
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#caracteristicas">Características</a></li>
+            <li><a href="#detalhes">Detalhes</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+
+<main id="inicio">
+
+    <section class="produto-detalhe" id="produtos">
+
+        <div class="produto-container">
+
+            <div class="galeria-produto">
+
+                <div class="imagem-principal-container">
+                    <img id="imagem-principal"
+                        src="aviator1.webp"
+                        alt="Ray-Ban Meta Aviator Brilhante Preto">
+                </div>
+
+                <div class="miniaturas" id="miniaturas-galeria"></div>
+
+            </div>
+
         </div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#caracteristicas">Características</a></li>
-                <li><a href="#detalhes">Detalhes</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main id="inicio">
 
-        <section class="produto-detalhe" id="produtos">
+        <div class="side-info-panel">
 
-            <div class="produto-container">
-                <div class="galeria-produto">
-                    <div class="imagem-principal-container">
-                        <img id="imagem-principal" src="cinzah1.webp"
-                            alt="Ray-Ban Meta Headliner Asteróide Cinza Brilhante">
-                    </div>
-                    <div class="miniaturas" id="miniaturas-galeria">
-                    </div>
-                </div>
-            </div>
+            <div class="produto-info">
 
-            <div class="side-info-panel">
-                <div class="produto-info">
-                    <h1>Ray-Ban Meta Headliner</h1>
-                    <p class="tag-novo">NOVO</p>
+                <h1>Ray-Ban Meta Aviator</h1>
 
-                    <p class="cor-selecionada-texto">
-                        <strong>Cor da Armação:</strong> <span id="cor-selecionada-nome">Brilhante Cinza
-                            asteroide</span><br>
-                        <strong>Lente:</strong> <span id="lente-selecionada-nome">Verificar lentes disponíveis</span>
-                    </p>
+                <p class="tag-novo">NOVO</p>
 
-                    <div class="modelos-opcoes">
 
-                        <div class="opcoes-grupo">
-                            <label for="cores-lista">Cor da Armação</label>
-                            <div class="opcoes-lista cores-lista" id="cores-lista">
+                <p class="cor-selecionada-texto">
 
-                                <div class="opcao-item opcao-cor selected" data-cor="Brilhante Cinza asteroide"
-                                    data-lente-padrao="Transitions" onclick="selecionarCor(this)">
-                                    <div class="cor-mini" style="background-color: #949191;"></div>
+                    <strong>Cor da Armação:</strong>
+
+                    <span id="cor-selecionada-nome">
+                        Brilhante Preto
+                    </span>
+
+                    <br>
+
+                    <strong>Lente:</strong>
+
+                    <span id="lente-selecionada-nome">
+                        Verde polarizado
+                    </span>
+
+                </p>
+
+
+                <div class="modelos-opcoes">
+
+
+                    <div class="opcoes-grupo">
+
+                        <label for="cores-lista">
+                            Cor da Armação
+                        </label>
+
+                        <div class="opcoes-lista cores-lista"
+                            id="cores-lista">
+
+
+                            <div class="opcao-item opcao-cor selected"
+                                data-cor="Brilhante Preto"
+                                onclick="selecionarCor(this)">
+
+                                <div class="cor-mini"
+                                    style="background-color: #111111;">
                                 </div>
 
-                                <div class="opcao-item opcao-cor" data-cor="Preto Fosco" data-lente-padrao="Transitions"
-                                    onclick="selecionarCor(this)">
-                                    <div class="cor-mini" style="background-color: #000000;"></div>
-                                </div>
-
-                                <div class="opcao-item opcao-cor" data-cor="Preto Brilhante"
-                                    data-lente-padrao="Transitions" onclick="selecionarCor(this)">
-                                    <div class="cor-mini" style="background-color: #111111;"></div>
-                                </div>
                             </div>
-                        </div>
 
-                        <div class="opcoes-grupo">
-                            <label for="btn-verificar-lentes">Tipo de Lente</label>
-                            <a id="btn-verificar-lentes"
-                                href="https://wa.me/557734296068?text=Olá,%20gostaria%20de%20verificar%20as%20lentes%20disponíveis%20para%20o%20Ray-Ban%20Meta%20Headliner%20na%20cor%20[COR_SELECIONADA]"
-                                target="_blank" class="btn-verificar-lentes">
-                                VERIFICAR LENTES DISPONÍVEIS
-                            </a>
+
+                            <div class="opcao-item opcao-cor"
+                                data-cor="Brilhante Havana"
+                                onclick="selecionarCor(this)">
+
+                                <div class="cor-mini"
+                                    style="background-color: #674634;">
+                                </div>
+
+                            </div>
+
+
+                            <div class="opcao-item opcao-cor"
+                                data-cor="Brilhante Preto Transitions"
+                                onclick="selecionarCor(this)">
+
+                                <div class="cor-mini"
+                                    style="background-color: #111111;">
+                                </div>
+
+                            </div>
+
+
+                            <div class="opcao-item opcao-cor"
+                                data-cor="Polido Havana"
+                                onclick="selecionarCor(this)">
+
+                                <div class="cor-mini"
+                                    style="background-color: #765039;">
+                                </div>
+
+                            </div>
+
+
+                            <div class="opcao-item opcao-cor"
+                                data-cor="Polido Umber Transparente"
+                                onclick="selecionarCor(this)">
+
+                                <div class="cor-mini"
+                                    style="background-color: #80604f;">
+                                </div>
+
+                            </div>
+
+
                         </div>
 
                     </div>
-                    <p class="preco">R$ 3.299,00</p>
-                    <a href="https://wa.me/557734296068?text=Olá,%20quero%20comprar%20o%20Ray-Ban%20Meta%20Headliner%20[COR_SELECIONADA]"
-                        target="_blank" class="btn-comprar" id="btn-comprar">COMPRE AGORA</a>
 
-                    <p class="descricao">Óculos inteligentes que capturam sua perspectiva, tocam som e conectam você ao
-                        mundo — tudo com o estilo icônico Ray-Ban e a inteligência Meta.</p>
+
+                    <div class="opcoes-grupo">
+
+                        <label for="btn-verificar-lentes">
+                            Tipo de Lente
+                        </label>
+
+                        <a id="btn-verificar-lentes"
+                            href="#"
+                            target="_blank"
+                            class="btn-verificar-lentes">
+
+                            VERIFICAR LENTES DISPONÍVEIS
+
+                        </a>
+
+                    </div>
+
+
                 </div>
+
+
+                <p class="preco">
+                    R$ 3.299,00
+                </p>
+
+
+                <a href="#"
+                    target="_blank"
+                    class="btn-comprar"
+                    id="btn-comprar">
+
+                    COMPRE AGORA
+
+                </a>
+
+
+                <p class="descricao">
+
+                    Óculos inteligentes que combinam o design icônico
+                    Ray-Ban Aviator com tecnologia Meta. Capture fotos
+                    e vídeos, ouça música, faça chamadas e interaja
+                    com a Meta AI sem precisar tirar o celular do bolso.
+
+                </p>
+
             </div>
 
-        </section>
+        </div>
 
-        <section class="meta-ai-section" id="caracteristicas">
+    </section>
+
+
+    <section class="meta-ai-section" id="caracteristicas">
             <h2>CARACTERÍSTICAS</h2>
             <div class="meta-ai-cards">
                 <div class="meta-card">
                     <video autoplay muted loop playsinline>
-                        <source src="videoCabeloRosa.mp4" type="video/webm">
+                        <source src="geracaodois/wayfarer/METAIA.mp4" type="video/webm">
                     </video>
                     <div class="meta-card-text">
-                        <h3>Meta AI</h3>
+                        <h3>Meta IA</h3>
                         <p>Converse com a Meta AI para obter sugestões e respostas em tempo real. Pergunte aos seus
                             óculos sobre pontos turísticos, receitas enquanto estiver em movimento, e até mesmo para
                             lembrá-lo de onde estacionou.</p>
@@ -112,55 +224,50 @@
 
                 <div class="meta-card">
                     <video autoplay muted loop playsinline>
-                        <source src="video2.mp4" type="video/mp4">
+                        <source src="geracaodois/wayfarer/CAPTURE.mp4" type="video/mp4">
                     </video>
                     <div class="meta-card-text">
                         <h3>CAPTURE</h3>
                         <p>Capture o que você vê e ouve sem precisar tirar seu telefone do bolso. A câmera ultrawide de
-                            12 MP e o sistema de cinco microfones capturam vídeos com precisão e clareza. Você pode
-                            gravar vídeos em 3K Ultra HD para a mais alta resolução.</p>
+                            12 MP e o sistema de seis microfones capturam vídeos com precisão e clareza em 3K Ultra HD.</p>
                     </div>
                 </div>
 
                 <div class="meta-card">
                     <video autoplay muted loop playsinline>
-                        <source src="videoPraia.mp4" type="video/mp4">
+                        <source src="geracaodois/wayfarer/OUÇA.mp4" type="video/mp4">
                     </video>
                     <div class="meta-card-text">
                         <h3>OUÇA</h3>
                         <p>Alto-falantes embutidos nas hastes dos óculos entregam som que apenas você pode ouvir,
-                            enquanto 5 microfones capturam áudio nítido para chamadas. Os alto-falantes open-ear
-                            discretos oferecem áudio rico e de qualidade sem bloquear conversas.</p>
+                            enquanto 6 microfones capturam áudio nítido para chamadas e comandos de voz.</p>
                     </div>
                 </div>
 
                 <div class="meta-card">
                     <video autoplay muted loop playsinline>
-                        <source src="videoAudio.mp4" type="video/mp4">
+                        <source src="geracaodois/wayfarer/CONTROLE.mp4" type="video/mp4">
                     </video>
                     <div class="meta-card-text">
-                        <h3>COMUNICAÇÃO MÃOS-LIVRES</h3>
+                        <h3>CONTROLES</h3>
                         <p>Atenda chamadas de vídeo, envie mensagens de texto ou de voz e faça ligações telefônicas—tudo
-                            com as mãos livres. Obtenha o seu melhor som em chamadas com 90% do ruído de fundo
-                            bloqueado.</p>
+                            com as mãos livres.</p>
                     </div>
                 </div>
 
                 <div class="meta-card">
                     <video autoplay muted loop playsinline>
-                        <source src="VideoEstojo.mp4" type="video/mp4">
+                        <source src="geracaodois/wayfarer/BATERIA.mp4" type="video/mp4">
                     </video>
                     <div class="meta-card-text">
-                        <h3>ESTOJO DE RECARGA</h3>
-                        <p>Desfrute de até 8 horas de duração da bateria com uma única carga, além de 48 horas
-                            adicionais com o estojo de recarga totalmente carregado. Carregue até 50% em apenas 20
-                            minutos.</p>
+                        <h3>MAIOR DURAÇÃO DA BATERIA</h3>
+                        <p>Desfrute de até 9 horas de duração da bateria com uma única carga. Carregamento prático através do estojo inteligente.</p>
                     </div>
                 </div>
 
                 <div class="meta-card">
                     <video autoplay muted loop playsinline>
-                        <source src="VideoApp.webm" type="video/mp4">
+                        <source src="geracaodois/wayfarer/APP.mp4" type="video/mp4">
                     </video>
                     <div class="meta-card-text">
                         <h3>APLICATIVO META VIEW</h3>
@@ -171,312 +278,745 @@
             </div>
         </section>
 
-        <section class="detalhes-produto" id="detalhes">
-            <h2>Detalhes</h2>
 
-            <div class="detalhes-grid">
-                <div class="detalhe-item">
-                    <div class="detalhe-titulo">
-                        <img src="armacao_icon.png" alt="Descrição da Armação">
-                        <h3>Descrição da Armação</h3>
-                    </div>
-                    <table>
-                        <tr>
-                            <th>Código do modelo</th>
-                            <td id="detalhe-cod-modelo">RW4013 6702CE 50-23</td>
-                        </tr>
-                        <tr>
-                            <th>Formato da armação</th>
-                            <td>Phantos (Headliner Gen 2)</td>
-                        </tr>
-                        <tr>
-                            <th>Cor da armação</th>
-                            <td id="detalhe-cor-armacao">Brilhante Cinza asteroide</td>
-                        </tr>
-                        <tr>
-                            <th>Tipo de material da armação</th>
-                            <td>Injetado</td>
-                        </tr>
-                        <tr>
-                            <th>Cor da haste</th>
-                            <td>Cinza Asteróide</td>
-                        </tr>
-                    </table>
-                </div>
+    <section class="detalhes-produto" id="detalhes">
 
-                <div class="detalhe-item">
-                    <div class="detalhe-titulo">
-                        <img src="lente_icon.png" alt="Informações da Lente">
-                        <h3>Informações da Lente</h3>
-                    </div>
-                    <table>
-                        <tr>
-                            <th>Cor e Tipo de Lente</th>
-                            <td id="detalhe-cor-tipo-lente">Verifique disponibilidade via WhatsApp</td>
-                        </tr>
-                        <tr>
-                            <th>Tratamento das lentes</th>
-                            <td id="detalhe-tratamento-lente">Verifique disponibilidade via WhatsApp</td>
-                        </tr>
-                        <tr>
-                            <th>Preparação para Receita</th>
-                            <td>Aceita receitas de -6.00 a +4.00 (Potência Total)</td>
-                        </tr>
-                    </table>
+        <h2>Detalhes</h2>
+        <div class="detalhes-grid">
+            <div class="detalhe-item">
+                <div class="detalhe-titulo">
+                    <img src="armacao_icon.png"
+                        alt="Descrição da Armação">
+                    <h3>Descrição da Armação</h3>
                 </div>
+                <table>
+                    <tr>
+                        <th>Código do modelo</th>
+                        <td id="detalhe-cod-modelo">
+                            RW4016 601/9A 54-18
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Formato da armação</th>
+                        <td>Piloto</td>
+                    </tr>
 
-                <div class="detalhe-item">
-                    <div class="detalhe-titulo">
-                        <img src="tamanho_icon.png" alt="Tamanho do Produto">
-                        <h3>Tamanho do Produto (Padrão)</h3>
-                    </div>
-                    <table>
-                        <tr>
-                            <th>Tamanho</th>
-                            <td>50 23mm</td>
-                        </tr>
-                        <tr>
-                            <th>Altura da lente</th>
-                            <td>42.6mm (Standard fit)</td>
-                        </tr>
-                        <tr>
-                            <th>Comprimento da haste</th>
-                            <td>150mm</td>
-                        </tr>
-                        <tr>
-                            <th>Cobertura facial</th>
-                            <td>Pequeno, Ponte alta</td>
-                        </tr>
-                    </table>
-                </div>
+                    <tr>
+                        <th>Cor da armação</th>
+                        <td id="detalhe-cor-armacao">
+                            Brilhante Preto
+                        </td>
+                    </tr>
 
-                <div class="detalhe-item">
-                    <div class="detalhe-titulo">
-                        <img src="camera_icon.png" alt="Câmera">
-                        <h3>Câmera (12 MP Ultra-Wide)</h3>
-                    </div>
-                    <table>
-                        <tr>
-                            <th>Câmera - Imagens</th>
-                            <td>3024x4032px</td>
-                        </tr>
-                        <tr>
-                            <th>Câmera - Vídeo</th>
-                            <td>3K Ultra HD a 30fps (e 1080p a 60fps)</td>
-                        </tr>
-                    </table>
-                </div>
+                    <tr>
+                        <th>Material da armação</th>
+                        <td>Injetado</td>
+                    </tr>
 
-                <div class="detalhe-item">
-                    <div class="detalhe-titulo">
-                        <img src="audio_icon.png" alt="Áudio">
-                        <h3>Áudio</h3>
-                    </div>
-                    <table>
-                        <tr>
-                            <th>Áudio</th>
-                            <td>2 alto-falantes Open Ear, 5 microfones</td>
-                        </tr>
-                        <tr>
-                            <th>Volume</th>
-                            <td>50% mais alto e 2x mais grave (vs. Gen 1)</td>
-                        </tr>
-                    </table>
-                </div>
+                    <tr>
+                        <th>Cor das hastes</th>
+                        <td id="detalhe-cor-hastes">
+                            Preto
+                        </td>
+                    </tr>
 
-                <div class="detalhe-item">
-                    <div class="detalhe-titulo">
-                        <img src="controles_icon.png" alt="Controles">
-                        <h3>Controles</h3>
-                    </div>
-                    <table>
-                        <tr>
-                            <th>Controles</th>
-                            <td>Toque e comando de voz</td>
-                        </tr>
-                        <tr>
-                            <th>Assistente</th>
-                            <td>Meta AI</td>
-                        </tr>
-                    </table>
-                </div>
+                </table>
 
-                <div class="detalhe-item">
-                    <div class="detalhe-titulo">
-                        <img src="bateria_icon.png" alt="Bateria e Memória">
-                        <h3>Bateria e Memória</h3>
-                    </div>
-                    <table>
-                        <tr>
-                            <th>Bateria</th>
-                            <td>Recarregável, dura até 8h (48h extras com estojo)</td>
-                        </tr>
-                        <tr>
-                            <th>Memória</th>
-                            <td>32GB (1000+ Fotos ou 100+ Vídeos 30s)</td>
-                        </tr>
-                    </table>
-                </div>
-
-                <div class="detalhe-item">
-                    <div class="detalhe-titulo">
-                        <img src="conectividade_icon.png" alt="Conectividade">
-                        <h3>Conectividade</h3>
-                    </div>
-                    <table>
-                        <tr>
-                            <th>Conectividade</th>
-                            <td>Wi-Fi 6 | Bluetooth 5.3</td>
-                        </tr>
-                    </table>
-                </div>
-
-                <div class="detalhe-item">
-                    <div class="detalhe-titulo">
-                        <img src="compatibilidade_icon.png" alt="Compatibilidade">
-                        <h3>Compatibilidade</h3>
-                    </div>
-                    <table>
-                        <tr>
-                            <th>Compatibilidade</th>
-                            <td>iOS 15.2+ / Android 10+</td>
-                        </tr>
-                    </table>
-                </div>
             </div>
 
-            <div class="legal-text">
-                <p>Armações icônicas que chamam a atenção e uma tecnologia que permite que você navegue sem esforço. Um
-                    estilo pioneiro de Hollywood ao hip-hop, o Headliner nunca fica parado. O favorito de cada geração
-                    de
-                    influenciadores culturais, agora ele continua a sua jornada com a avançada Meta AI. Capture fotos e
-                    vídeos, ouça músicas e podcasts, faça chamadas, traduza em tempo real ou mande uma mensagem em tempo
-                    real – tudo
-                    isso sem tirar o celular do bolso.
-                </p>
-                <p class="small-print">(1) Algumas funcionalidades podem não estar disponíveis em todas as regiões ou
-                    podem exigir a criação de uma conta Meta e/ou download do aplicativo Meta View. (2) Compatível
-                    apenas com
-                    dispositivos iOS e Android. (3) O assistente Meta AI está disponível em beta em inglês nos EUA e
-                    Canadá. Outros idiomas e regiões podem ser adicionados no futuro. (4) A duração da bateria varia de
-                    acordo
-                    com o uso. (5) Para garantir a qualidade de imagem e vídeo, use os óculos em ambientes bem
-                    iluminados. (6)
-                    A funcionalidade de áudio pode ser limitada em ambientes ruidosos.</p>
+
+
+            <div class="detalhe-item">
+
+                <div class="detalhe-titulo">
+
+                    <img src="lente_icon.png"
+                        alt="Informações da Lente">
+
+                    <h3>Informações da Lente</h3>
+
+                </div>
+
+
+                <table>
+
+                    <tr>
+                        <th>Cor da lente</th>
+                        <td id="detalhe-cor-lente">
+                            Verde polarizado
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>Tratamento</th>
+                        <td id="detalhe-tratamento-lente">
+                            Cor uniforme
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>Categoria da lente</th>
+                        <td id="detalhe-categoria-lente">
+                            3P
+                        </td>
+                    </tr>
+
+                </table>
+
             </div>
-        </section>
 
-    </main>
 
-    <footer class="footer" id="contato">
-        <p>&copy; 2025 Mercadótica. Todos os direitos reservados.</p>
-    </footer>
 
-    <script>
-        const PRODUTO_DATA = {
-            "Brilhante Cinza asteroide": {
-                codModelo: "RW4013 6702CE 50-23",
-                corArmacao: "Brilhante Cinza asteroide",
-                imagens: [
-                    "cinzah1.webp", // Imagem 1 
-                    "cinzah2.png", // Imagem 2
-                    "cinzah3.webp", // Imagem 3
-                    "cinzah4.webp", // Imagem 4
-                    "cinzah5.webp" // Imagem 5
-                ]
-            },
-            "Preto Fosco": {
-                codModelo: "RW4013 601ST3 50-23",
-                corArmacao: "Preto Fosco",
-                imagens: [
-                    "pretoh1.webp", // Imagem 1
-                    "pretoh2.png", // Imagem 2
-                    "pretoh3.webp", // Imagem 3 
-                    "pretoh4.webp", // Imagem 4
-                    "pretoh5.webp" // Imagem 5
-                ]
-            },
-            "Preto Brilhante": {
-                codModelo: " RW4013 601/MF 50-23",
-                corArmacao: "Preto Brilhante",
-                imagens: [
-                    "brilhanteh1.webp", // Imagem 1
-                    "brilhanteh2.png", // Imagem 2
-                    "brilhanteh3.webp", // Imagem 3
-                    "brilhanteh4.webp", // Imagem 4
-                    "brilhanteh5.webp" // Imagem 5
-                ]
+            <div class="detalhe-item">
+
+                <div class="detalhe-titulo">
+
+                    <img src="tamanho_icon.png"
+                        alt="Dimensões do Produto">
+
+                    <h3>Dimensões do Produto</h3>
+
+                </div>
+
+
+                <table>
+
+                    <tr>
+                        <th>Tamanho</th>
+                        <td>54 18mm</td>
+                    </tr>
+
+                    <tr>
+                        <th>Altura da lente</th>
+                        <td>46.6mm</td>
+                    </tr>
+
+                    <tr>
+                        <th>Comprimento da haste</th>
+                        <td>150mm</td>
+                    </tr>
+
+                    <tr>
+                        <th>Ajuste do rosto</th>
+                        <td>Grande</td>
+                    </tr>
+
+                    <tr>
+                        <th>Ponte & plaquetas</th>
+                        <td>Ajuste para ponte alta</td>
+                    </tr>
+
+                </table>
+
+            </div>
+
+
+
+            <div class="detalhe-item">
+
+                <div class="detalhe-titulo">
+
+                    <img src="camera_icon.png"
+                        alt="Câmera">
+
+                    <h3>Câmera</h3>
+
+                </div>
+
+
+                <table>
+
+                    <tr>
+                        <th>Aquisição de imagens</th>
+                        <td>3024x4032px</td>
+                    </tr>
+
+                    <tr>
+                        <th>Captura de vídeo</th>
+                        <td>
+                            720p-120fps, 1080p-30fps,
+                            3K-30fps
+                        </td>
+                    </tr>
+
+                </table>
+
+            </div>
+
+
+
+            <div class="detalhe-item">
+
+                <div class="detalhe-titulo">
+
+                    <img src="audio_icon.png"
+                        alt="Áudio">
+
+                    <h3>Áudio</h3>
+
+                </div>
+
+
+                <table>
+
+                    <tr>
+                        <th>Alto-falante</th>
+                        <td>2 alto-falantes abertos</td>
+                    </tr>
+
+                    <tr>
+                        <th>Microfone</th>
+                        <td>Array de 6 microfones</td>
+                    </tr>
+
+                </table>
+
+            </div>
+
+
+
+            <div class="detalhe-item">
+
+                <div class="detalhe-titulo">
+
+                    <img src="controles_icon.png"
+                        alt="Controles">
+
+                    <h3>Controles</h3>
+
+                </div>
+
+
+                <table>
+
+                    <tr>
+                        <th>Controles</th>
+                        <td>Toque e controles de voz</td>
+                    </tr>
+
+                    <tr>
+                        <th>Assistente</th>
+                        <td>Meta AI</td>
+                    </tr>
+
+                </table>
+
+            </div>
+
+
+
+            <div class="detalhe-item">
+
+                <div class="detalhe-titulo">
+
+                    <img src="bateria_icon.png"
+                        alt="Bateria e Memória">
+
+                    <h3>Bateria e Memória</h3>
+
+                </div>
+
+
+                <table>
+
+                    <tr>
+                        <th>Bateria</th>
+                        <td>
+                            Recarregável, até 9 horas
+                            com uma única carga
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>Memória</th>
+                        <td>
+                            Armazenamento flash 32GB,
+                            1000+ fotos e 100+ vídeos
+                            de 30 segundos
+                        </td>
+                    </tr>
+
+                </table>
+
+            </div>
+
+
+
+            <div class="detalhe-item">
+
+                <div class="detalhe-titulo">
+
+                    <img src="conectividade_icon.png"
+                        alt="Conectividade">
+
+                    <h3>Conectividade</h3>
+
+                </div>
+
+
+                <table>
+
+                    <tr>
+                        <th>Wi-Fi</th>
+                        <td>Wi-Fi 6 certificado</td>
+                    </tr>
+
+                    <tr>
+                        <th>Bluetooth</th>
+                        <td>Bluetooth 5.3</td>
+                    </tr>
+
+                </table>
+
+            </div>
+
+
+
+            <div class="detalhe-item">
+
+                <div class="detalhe-titulo">
+
+                    <img src="compatibilidade_icon.png"
+                        alt="Compatibilidade">
+
+                    <h3>Compatibilidade</h3>
+
+                </div>
+
+
+                <table>
+
+                    <tr>
+                        <th>Compatibilidade com OS</th>
+                        <td>
+                            iOS 17+ / Android 10+
+                        </td>
+                    </tr>
+
+                </table>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="legal-text">
+
+            <p>
+                O Ray-Ban Meta Aviator combina o formato clássico
+                Piloto com tecnologia inteligente. Capture fotos
+                e vídeos, ouça músicas, faça chamadas e utilize
+                a Meta AI diretamente pelos óculos, tudo sem
+                precisar tirar o celular do bolso.
+            </p>
+
+
+            <p class="small-print">
+
+                (1) Algumas funcionalidades podem não estar disponíveis
+                em todas as regiões ou podem exigir a criação de uma
+                conta Meta e/ou download do aplicativo Meta View.
+
+                (2) Alguns recursos de voz podem depender da
+                disponibilidade regional.
+
+                (3) A disponibilidade da Meta AI varia conforme
+                região, idioma e versão do software.
+
+                (4) A duração da bateria varia de acordo com o uso.
+
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer class="footer" id="contato">
+
+    <p>
+        &copy; 2025 Mercadótica.
+        Todos os direitos reservados.
+    </p>
+
+</footer>
+
+
+
+<script>
+
+    const PRODUTO_DATA = {
+
+
+        "Brilhante Preto": {
+
+            codModelo: "RW4016 601/9A 54-18",
+
+            corArmacao: "Brilhante Preto",
+
+            corHastes: "Preto",
+
+            corLente: "Verde polarizado",
+
+            tratamento: "Cor uniforme",
+
+            categoriaLente: "3P",
+
+            imagens: [
+                "geracaodois/aviator/verdepl1.avif",
+                "geracaodois/aviator/verdepl2.avif",
+                "geracaodois/aviator/verdepl3.avif",
+                "geracaodois/aviator/verdepl4.avif",
+                "geracaodois/aviator/verdepl5.avif"
+            ]
+
+        },
+
+
+        "Brilhante Havana": {
+
+            codModelo: "RW4016 690573 54-18",
+
+            corArmacao: "Brilhante Havana",
+
+            corHastes: "Havana",
+
+            corLente: "Marrom-escuro",
+
+            tratamento: "Cor uniforme",
+
+            categoriaLente: "3N",
+
+            imagens: [
+                "geracaodois/aviator/havana1.avif",
+                "geracaodois/aviator/havana2.avif",
+                "geracaodois/aviator/havana3.avif",
+                "geracaodois/aviator/havana4.avif",
+                "geracaodois/aviator/havana5.avif"
+            ]
+
+        },
+
+
+        "Brilhante Preto Transitions": {
+
+            codModelo: "RW4016 601/1M 54-18",
+
+            corArmacao: "Brilhante Preto",
+
+            corHastes: "Preto",
+
+            corLente: "Transparente/Verde",
+
+            tratamento: "Transitions®",
+
+            categoriaLente: "3F",
+
+            imagens: [
+                "geracaodois/aviator/preto2.webp",
+                "geracaodois/aviator/preto22.avif",
+                "geracaodois/aviator/preto3.avif",
+                "geracaodois/aviator/preto4.avif",
+                "geracaodois/aviator/preto5.avif"
+            ]
+
+        },
+
+
+        "Polido Havana": {
+
+            codModelo: "RW4016 6905M4 54-18",
+
+            corArmacao: "Polido Havana",
+
+            corHastes: "Havana",
+
+            corLente: "Transparente/Marrom",
+
+            tratamento: "Transitions®",
+
+            categoriaLente: "3F",
+
+            imagens: [
+                "geracaodois/aviator/pl1.webp",
+                "geracaodois/aviator/pl2.avif",
+                "geracaodois/aviator/plp3.avif",
+                "geracaodois/aviator/pl4.avif",
+                "geracaodois/aviator/pl5.avif"
+            ]
+
+        },
+
+
+        "Polido Umber Transparente": {
+
+            codModelo: "RW4016 6912JD 54-18",
+
+            corArmacao: "Polido Umber Transparente",
+
+            corHastes: "Umber Transparente",
+
+            corLente: "Transparente/Jade",
+
+            tratamento: "Transitions®",
+
+            categoriaLente: "3F",
+
+            imagens: [
+                "geracaodois/aviator/umber1.webp",
+                "geracaodois/aviator/umber2.avif",
+                "geracaodois/aviator/umber3.avif",
+                "geracaodois/aviator/umber4.avif",
+                "geracaodois/aviator/umber5.avif"
+            ]
+
+        }
+
+    };
+
+
+    let corAtual = "Brilhante Preto";
+
+
+    document.addEventListener("DOMContentLoaded", () => {
+
+        atualizarGaleriaEDetalhes();
+
+    });
+
+
+    function selecionarCor(elemento) {
+
+        document
+            .querySelectorAll(".opcao-cor")
+            .forEach(item => {
+
+                item.classList.remove("selected");
+
+            });
+
+
+        elemento.classList.add("selected");
+
+
+        corAtual =
+            elemento
+                .getAttribute("data-cor")
+                .trim();
+
+
+        atualizarGaleriaEDetalhes();
+
+    }
+
+
+    function atualizarGaleriaEDetalhes() {
+
+        const data =
+            PRODUTO_DATA[corAtual];
+
+
+        if (!data) {
+
+            console.error(
+                `Combinação de cor não encontrada: ${corAtual}`
+            );
+
+            return;
+
+        }
+
+
+        const imagemPrincipalElement =
+            document.getElementById(
+                "imagem-principal"
+            );
+
+
+        const miniaturasContainer =
+            document.getElementById(
+                "miniaturas-galeria"
+            );
+
+
+        imagemPrincipalElement.style.opacity = "0";
+
+
+        setTimeout(() => {
+
+            imagemPrincipalElement.src =
+                data.imagens[0];
+
+            imagemPrincipalElement.alt =
+                `Ray-Ban Meta Aviator ${data.corArmacao}`;
+
+            imagemPrincipalElement.style.opacity = "1";
+
+        }, 150);
+
+
+        miniaturasContainer.innerHTML = "";
+
+
+        data.imagens.forEach((imgSrc, index) => {
+
+            const img =
+                document.createElement("img");
+
+
+            img.src = imgSrc;
+
+
+            img.alt =
+                `Ray-Ban Meta Aviator ${data.corArmacao} - imagem ${index + 1}`;
+
+
+            img.onclick = () =>
+                mudarImagem(img);
+
+
+            if (index === 0) {
+
+                img.classList.add("selected");
+
             }
 
-        };
-        let corAtual = "Brilhante Cinza asteroide";
 
-        document.addEventListener('DOMContentLoaded', () => {
-            atualizarGaleriaEDetalhes();
+            miniaturasContainer.appendChild(img);
+
         });
 
-        function selecionarCor(elemento) {
-            document.querySelectorAll('.opcao-cor').forEach(item => {
-                item.classList.remove('selected');
+
+        document.getElementById(
+            "cor-selecionada-nome"
+        ).textContent =
+            data.corArmacao;
+
+
+        document.getElementById(
+            "lente-selecionada-nome"
+        ).textContent =
+            data.corLente;
+
+
+        document.getElementById(
+            "detalhe-cod-modelo"
+        ).textContent =
+            data.codModelo;
+
+
+        document.getElementById(
+            "detalhe-cor-armacao"
+        ).textContent =
+            data.corArmacao;
+
+
+        document.getElementById(
+            "detalhe-cor-hastes"
+        ).textContent =
+            data.corHastes;
+
+
+        document.getElementById(
+            "detalhe-cor-lente"
+        ).textContent =
+            data.corLente;
+
+
+        document.getElementById(
+            "detalhe-tratamento-lente"
+        ).textContent =
+            data.tratamento;
+
+
+        document.getElementById(
+            "detalhe-categoria-lente"
+        ).textContent =
+            data.categoriaLente;
+
+
+        const corUrl =
+            encodeURIComponent(
+                data.corArmacao
+            );
+
+
+        const lenteUrl =
+            encodeURIComponent(
+                data.corLente
+            );
+
+
+        const linkComprar =
+            document.getElementById(
+                "btn-comprar"
+            );
+
+
+        const linkLentes =
+            document.getElementById(
+                "btn-verificar-lentes"
+            );
+
+
+        linkComprar.href =
+            `https://wa.me/557734296068?text=Olá,%20quero%20comprar%20o%20Ray-Ban%20Meta%20Aviator%20na%20cor%20${corUrl}%20com%20lente%20${lenteUrl}`;
+
+
+        linkLentes.href =
+            `https://wa.me/557734296068?text=Olá,%20gostaria%20de%20verificar%20a%20disponibilidade%20do%20Ray-Ban%20Meta%20Aviator%20na%20cor%20${corUrl}%20com%20lente%20${lenteUrl}`;
+
+    }
+
+
+    function mudarImagem(miniatura) {
+
+        const imagemPrincipal =
+            document.getElementById(
+                "imagem-principal"
+            );
+
+
+        document
+            .querySelectorAll(
+                "#miniaturas-galeria img"
+            )
+            .forEach(img => {
+
+                img.classList.remove(
+                    "selected"
+                );
+
             });
-            elemento.classList.add('selected');
-            corAtual = elemento.getAttribute('data-cor').trim();
-            atualizarGaleriaEDetalhes();
-        }
-
-        function atualizarGaleriaEDetalhes() {
-            const data = PRODUTO_DATA[corAtual];
-            const imagemPrincipalElement = document.getElementById('imagem-principal');
-            const miniaturasContainer = document.getElementById('miniaturas-galeria');
-            const corNomeCompleto = data ? data.corArmacao : "Indefinida";
-
-            if (data) {
-                imagemPrincipalElement.style.opacity = '0';
-                setTimeout(() => {
-                    imagemPrincipalElement.src = data.imagens[0]; 
-                    imagemPrincipalElement.alt = `Ray-Ban Meta Headliner ${corNomeCompleto}`;
-                    imagemPrincipalElement.style.opacity = '1';
-                }, 150);
-
-                miniaturasContainer.innerHTML = '';
-                data.imagens.forEach((imgSrc, index) => {
-                    const img = document.createElement('img');
-                    img.src = imgSrc;
-                    img.onclick = () => mudarImagem(img);
-                    if (index === 0) {
-                        img.classList.add('selected');
-                    }
-                    miniaturasContainer.appendChild(img);
-                });
-                document.getElementById('cor-selecionada-nome').textContent = corNomeCompleto;
-                const linkComprar = document.getElementById('btn-comprar');
-                const linkLentes = document.getElementById('btn-verificar-lentes');
-                const corUrl = encodeURIComponent(corNomeCompleto);
-                linkComprar.href = `https://wa.me/557734296068?text=Olá,%20quero%20comprar%20o%20Ray-Ban%20Meta%20Headliner%20na%20cor%20${corUrl}`;
-                linkLentes.href = `https://wa.me/557734296068?text=Olá,%20gostaria%20de%20verificar%20as%20lentes%20disponíveis%20para%20o%20Ray-Ban%20Meta%20Headliner%20na%20cor%20${corUrl}`;
-                document.getElementById('detalhe-cod-modelo').textContent = data.codModelo;
-                document.getElementById('detalhe-cor-armacao').textContent = corNomeCompleto;
-                document.getElementById('detalhe-cor-tipo-lente').textContent = "Verifique disponibilidade via WhatsApp";
-                document.getElementById('detalhe-tratamento-lente').textContent = "Verifique disponibilidade via WhatsApp";
 
 
-            } else {
-                console.error(`Combinação de cor não encontrada: ${corAtual}`);
-            }
-        }
-        function mudarImagem(miniatura) {
-            const imagemPrincipal = document.getElementById('imagem-principal');
-            document.querySelectorAll('#miniaturas-galeria img').forEach(img => {
-                img.classList.remove('selected');
-            });
-            miniatura.classList.add('selected');
-            imagemPrincipal.style.opacity = '0';
-            setTimeout(() => {
-                imagemPrincipal.src = miniatura.src;
-                imagemPrincipal.style.opacity = '1';
-            }, 150);
-        }
-    </script>
+        miniatura.classList.add(
+            "selected"
+        );
+
+
+        imagemPrincipal.style.opacity =
+            "0";
+
+
+        setTimeout(() => {
+
+            imagemPrincipal.src =
+                miniatura.src;
+
+            imagemPrincipal.style.opacity =
+                "1";
+
+        }, 150);
+
+    }
+
+</script>
+```
+
 </body>
 
 </html>

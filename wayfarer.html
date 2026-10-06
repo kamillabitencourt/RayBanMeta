@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ray-Ban Meta | Wayfarer</title>
+    <title>Ray-Ban Meta (Gen 3) | Wayfarer</title>
 
     <link rel="stylesheet" href="stylesRay.css">
 
@@ -32,7 +32,7 @@
             <div class="produto-container">
                 <div class="galeria-produto">
                     <div class="imagem-principal-container">
-                        <img id="imagem-principal" src="pretopolarizado.webp" alt="Ray-Ban Meta Wayfarer Fosco Preto">
+                        <img id="imagem-principal" src="pretopolarizado.webp" alt="Ray-Ban Meta (Gen 3) Wayfarer Fosco Preto">
                     </div>
                     <div class="miniaturas" id="miniaturas-galeria">
                     </div>
@@ -41,12 +41,12 @@
 
             <div class="side-info-panel">
                 <div class="produto-info">
-                    <h1>Ray-Ban Meta Wayfarer</h1>
+                    <h1>Ray-Ban Meta (Gen 3) Wayfarer</h1>
                     <p class="tag-novo">NOVO</p>
 
                     <p class="cor-selecionada-texto">
                         <strong>Cor da Armação:</strong> <span id="cor-selecionada-nome">Fosco Preto</span><br>
-                        <strong>Lente:</strong> <span id="lente-selecionada-nome">Verificar lentes disponíveis</span>
+                        <strong>Lente:</strong> <span id="lente-selecionada-nome">Transparente / Filtro Luz Azul-Violeta</span>
                     </p>
 
                     <div class="modelos-opcoes">
@@ -56,18 +56,43 @@
                             <div class="opcoes-lista cores-lista" id="cores-lista">
 
                                 <div class="opcao-item opcao-cor selected" data-cor="Fosco Preto"
-                                    data-lente-padrao="Transitions" onclick="selecionarCor(this)">
-                                    <div class="cor-mini" style="background-color: #000000;"></div>
-                                </div>
-
-                                <div class="opcao-item opcao-cor" data-cor="Azul Cósmico Brilhante "
-                                    data-lente-padrao="Transitions" onclick="selecionarCor(this)">
-                                    <div class="cor-mini" style="background-color: #2f2f82;"></div>
-                                </div>
-
-                                <div class="opcao-item opcao-cor" data-cor="Preto Brilhante "
-                                    data-lente-padrao="Transitions" onclick="selecionarCor(this)">
+                                    data-lente-padrao="Transparente / Filtro Luz Azul-Violeta" onclick="selecionarCor(this)">
                                     <div class="cor-mini" style="background-color: #111111;"></div>
+                                </div>
+
+                                <div class="opcao-item opcao-cor" data-cor="Azul Oceano Transparente"
+                                    data-lente-padrao="Transparente/Cinza Transitions®" onclick="selecionarCor(this)">
+                                    <div class="cor-mini" style="background-color: #3f5265;"></div>
+                                </div>
+
+                                <div class="opcao-item opcao-cor" data-cor="Polido Preto"
+                                    data-lente-padrao="Verde polarizado" onclick="selecionarCor(this)">
+                                    <div class="cor-mini" style="background-color: #050505;"></div>
+                                </div>
+
+                                <div class="opcao-item opcao-cor" data-cor="Polido Havana"
+                                    data-lente-padrao="Verde G-15" onclick="selecionarCor(this)">
+                                    <div class="cor-mini" style="background-color: #6b4a2f;"></div>
+                                </div>
+
+                                <div class="opcao-item opcao-cor" data-cor="Polido Preto Transparente"
+                                    data-lente-padrao="Transparente/Cinza Transitions®" onclick="selecionarCor(this)">
+                                    <div class="cor-mini" style="background-color: #343434;"></div>
+                                </div>
+
+                                <div class="opcao-item opcao-cor" data-cor="Polido Preto e Verde"
+                                    data-lente-padrao="Verde polarizado" onclick="selecionarCor(this)">
+                                    <div class="cor-mini" style="background-color: #151515;"></div>
+                                </div>
+
+                                <div class="opcao-item opcao-cor" data-cor="Preto Transparente"
+                                    data-lente-padrao="Transparente/Verde Transitions®" onclick="selecionarCor(this)">
+                                    <div class="cor-mini" style="background-color: #555555;"></div>
+                                </div>
+
+                                <div class="opcao-item opcao-cor" data-cor="Preto Transparente Aquamarine"
+                                    data-lente-padrao="Transparente/Aquamarine Transitions®" onclick="selecionarCor(this)">
+                                    <div class="cor-mini" style="background-color: #5f7475;"></div>
                                 </div>
                             </div>
                         </div>
@@ -82,7 +107,7 @@
                         </div>
 
                     </div>
-                    <p class="preco">R$ 3.299,00</p>
+                    <p class="preco">R$ 3.699,00</p>
                     <a href="https://wa.me/557734296068?text=Olá,%20quero%20comprar%20o%20Ray-Ban%20Meta%20Wayfarer%20[COR_SELECIONADA]"
                         target="_blank" class="btn-comprar" id="btn-comprar">COMPRE AGORA</a>
 
@@ -98,10 +123,10 @@
             <div class="meta-ai-cards">
                 <div class="meta-card">
                     <video autoplay muted loop playsinline>
-                        <source src="videoCabeloRosa.mp4" type="video/webm">
+                        <source src="geracaodois/wayfarer/METAIA.mp4" type="video/webm">
                     </video>
                     <div class="meta-card-text">
-                        <h3>Meta AI</h3>
+                        <h3>Meta IA</h3>
                         <p>Converse com a Meta AI para obter sugestões e respostas em tempo real. Pergunte aos seus
                             óculos sobre pontos turísticos, receitas enquanto estiver em movimento, e até mesmo para
                             lembrá-lo de onde estacionou.</p>
@@ -110,55 +135,50 @@
 
                 <div class="meta-card">
                     <video autoplay muted loop playsinline>
-                        <source src="video2.mp4" type="video/mp4">
+                        <source src="geracaodois/wayfarer/CAPTURE.mp4" type="video/mp4">
                     </video>
                     <div class="meta-card-text">
                         <h3>CAPTURE</h3>
                         <p>Capture o que você vê e ouve sem precisar tirar seu telefone do bolso. A câmera ultrawide de
-                            12 MP e o sistema de cinco microfones capturam vídeos com precisão e clareza. Você pode
-                            gravar vídeos em 3K Ultra HD para a mais alta resolução.</p>
+                            12 MP e o sistema de seis microfones capturam vídeos com precisão e clareza em 3K Ultra HD.</p>
                     </div>
                 </div>
 
                 <div class="meta-card">
                     <video autoplay muted loop playsinline>
-                        <source src="videoPraia.mp4" type="video/mp4">
+                        <source src="geracaodois/wayfarer/OUÇA.mp4" type="video/mp4">
                     </video>
                     <div class="meta-card-text">
                         <h3>OUÇA</h3>
                         <p>Alto-falantes embutidos nas hastes dos óculos entregam som que apenas você pode ouvir,
-                            enquanto 5 microfones capturam áudio nítido para chamadas. Os alto-falantes open-ear
-                            discretos oferecem áudio rico e de qualidade sem bloquear conversas.</p>
+                            enquanto 6 microfones capturam áudio nítido para chamadas e comandos de voz.</p>
                     </div>
                 </div>
 
                 <div class="meta-card">
                     <video autoplay muted loop playsinline>
-                        <source src="videoAudio.mp4" type="video/mp4">
+                        <source src="geracaodois/wayfarer/CONTROLE.mp4" type="video/mp4">
                     </video>
                     <div class="meta-card-text">
-                        <h3>COMUNICAÇÃO MÃOS-LIVRES</h3>
+                        <h3>CONTROLES</h3>
                         <p>Atenda chamadas de vídeo, envie mensagens de texto ou de voz e faça ligações telefônicas—tudo
-                            com as mãos livres. Obtenha o seu melhor som em chamadas com 90% do ruído de fundo
-                            bloqueado.</p>
+                            com as mãos livres.</p>
                     </div>
                 </div>
 
                 <div class="meta-card">
                     <video autoplay muted loop playsinline>
-                        <source src="VideoEstojo.mp4" type="video/mp4">
+                        <source src="geracaodois/wayfarer/BATERIA.mp4" type="video/mp4">
                     </video>
                     <div class="meta-card-text">
-                        <h3>ESTOJO DE RECARGA</h3>
-                        <p>Desfrute de até 8 horas de duração da bateria com uma única carga, além de 48 horas
-                            adicionais com o estojo de recarga totalmente carregado. Carregue até 50% em apenas 20
-                            minutos.</p>
+                        <h3>MAIOR DURAÇÃO DA BATERIA</h3>
+                        <p>Desfrute de até 9 horas de duração da bateria com uma única carga. Carregamento prático através do estojo inteligente.</p>
                     </div>
                 </div>
 
                 <div class="meta-card">
                     <video autoplay muted loop playsinline>
-                        <source src="VideoApp.webm" type="video/mp4">
+                        <source src="geracaodois/wayfarer/APP.mp4" type="video/mp4">
                     </video>
                     <div class="meta-card-text">
                         <h3>APLICATIVO META VIEW</h3>
@@ -181,11 +201,11 @@
                     <table>
                         <tr>
                             <th>Código do modelo</th>
-                            <td id="detalhe-cod-modelo">RW4012 601S1Z 50-22</td>
+                            <td id="detalhe-cod-modelo">RW4011 601S1 53-22</td>
                         </tr>
                         <tr>
                             <th>Formato da armação</th>
-                            <td>Quadrado (Wayfarer Gen 2)</td>
+                            <td>Quadrado (Wayfarer Gen 3)</td>
                         </tr>
                         <tr>
                             <th>Cor da armação</th>
@@ -218,7 +238,7 @@
                         </tr>
                         <tr>
                             <th>Preparação para Receita</th>
-                            <td>Aceita receitas de -6.00 a +4.00 (Potência Total)</td>
+                            <td>Disponível para lentes de grau conforme a disponibilidade e prescrição</td>
                         </tr>
                     </table>
                 </div>
@@ -231,19 +251,19 @@
                     <table>
                         <tr>
                             <th>Tamanho</th>
-                            <td>50 22mm</td>
+                            <td>53-22</td>
                         </tr>
                         <tr>
                             <th>Altura da lente</th>
-                            <td>41mm (Standard fit)</td>
+                            <td>43,6mm</td>
                         </tr>
                         <tr>
                             <th>Comprimento da haste</th>
-                            <td>150mm</td>
+                            <td>155mm</td>
                         </tr>
                         <tr>
                             <th>Cobertura facial</th>
-                            <td>Padrão Geofit, Ponte alta</td>
+                            <td>Ajuste para rosto grande, ponte alta</td>
                         </tr>
                     </table>
                 </div>
@@ -260,7 +280,7 @@
                         </tr>
                         <tr>
                             <th>Câmera - Vídeo</th>
-                            <td>3K Ultra HD a 30fps (e 1080p a 60fps)</td>
+                            <td>3K Ultra HD a 30fps</td>
                         </tr>
                     </table>
                 </div>
@@ -273,11 +293,11 @@
                     <table>
                         <tr>
                             <th>Áudio</th>
-                            <td>2 alto-falantes Open Ear, 5 microfones</td>
+                            <td>2 alto-falantes abertos, array de 6 microfones</td>
                         </tr>
                         <tr>
                             <th>Volume</th>
-                            <td>50% mais alto e 2x mais grave (vs. Gen 1)</td>
+                            <td>Áudio open-ear aprimorado com redução avançada do ruído do vento</td>
                         </tr>
                     </table>
                 </div>
@@ -307,11 +327,11 @@
                     <table>
                         <tr>
                             <th>Bateria</th>
-                            <td>Recarregável, dura até 8h (48h extras com estojo)</td>
+                            <td>Recarregável, até 9h com uma carga e até 50h adicionais com o estojo</td>
                         </tr>
                         <tr>
                             <th>Memória</th>
-                            <td>32GB (1000+ Fotos ou 100+ Vídeos 30s)</td>
+                            <td>32GB (1000+ fotos ou 100+ vídeos de 30s)</td>
                         </tr>
                     </table>
                 </div>
@@ -337,19 +357,16 @@
                     <table>
                         <tr>
                             <th>Compatibilidade</th>
-                            <td>iOS 15.2+ / Android 10+</td>
+                            <td>iOS 18.6+ / Android 15+</td>
                         </tr>
                     </table>
                 </div>
             </div>
 
             <div class="legal-text">
-                <p>Armações icônicas que chamam a atenção e uma tecnologia que permite que você navegue sem esforço. Um
-                    estilo pioneiro de Hollywood ao hip-hop, o Wayfarer nunca fica parado. O favorito de cada geração de
-                    influenciadores culturais, agora ele continua a sua jornada com a avançada Meta AI. Capture fotos e
-                    vídeos, ouça músicas e podcasts, faça chamadas, traduza em tempo real ou mande uma mensagem em tempo
-                    real – tudo
-                    isso sem tirar o celular do bolso.</p>
+                <p>O icônico Wayfarer agora chega à Geração 3 com um design mais fino e tecnologia de IA ainda mais integrada.
+                    Capture fotos e vídeos em 3K Ultra HD, ouça músicas e podcasts, faça chamadas, use a Meta AI e
+                    acesse funções inteligentes sem precisar tirar o celular do bolso.</p>
                 <p class="small-print">(1) Algumas funcionalidades podem não estar disponíveis em todas as regiões ou
                     podem exigir a criação de uma conta Meta e/ou download do aplicativo Meta View. (2) Compatível
                     apenas com
@@ -365,46 +382,100 @@
     </main>
 
     <footer class="footer" id="contato">
-        <p>&copy; 2025 Mercadótica. Todos os direitos reservados.</p>
+        <p>&copy; 2026 Mercadótica. Todos os direitos reservados.</p>
     </footer>
 
     <script>
         // Mapeamento de imagens para CADA COR (5 fotos por cor)
         const PRODUTO_DATA = {
             "Fosco Preto": {
-                codModelo: "RW4012 601S1Z 50-22",
+                codModelo: "RW4011 601S1 53-22",
                 corArmacao: "Fosco Preto",
-                imagens: [
-                    "pretow1.webp", // Imagem 1 (Principal)
-                    "pretow2.webp", // Imagem 2
-                    "pretow3.webp", // Imagem 3
-                    "pretow4.webp", // Imagem 4
-                    "pretow5.webp" // Imagem 5
-                ]
+                lente: "Transparente Filtro Luz Azul-Violeta",
+                tratamento: "Filtro Luz Azul-Violeta",
+                tamanho: "53 22 mm",
+                alturaLente: "43.6 mm",
+                comprimentoHaste: "155 mm",
+                categoriaLente: "Filtro Luz Azul-Violeta",
+                imagens: ["geracaodois/wayfarer/violeta1.avif", "geracaodois/wayfarer/violeta2.avif", "geracaodois/wayfarer/violeta3.avif", "geracaodois/wayfarer/violeta4.avif", "geracaodois/wayfarer/violeta5.avif"]
             },
-            "Azul Cósmico Brilhante ": {
-                codModelo: "RW4012 6628MF 50-22",
-                corArmacao: "Azul Cósmico Brilhante ",
-                imagens: [
-                    //"azulw1.png", // Imagem 1 (Principal)
-                    "azulw2.webp", // Imagem 2
-                    "azulw3.webp", // Imagem 3 (Usando imagem de outra cor como exemplo)
-                    "azulw5.webp", // Imagem 4
-                    "azulw4.webp" // Imagem 5
-                ]
+            "Azul Oceano Transparente": {
+                codModelo: "RW4011 9535MF 53-22",
+                corArmacao: "Azul Oceano Transparente",
+                lente: "Transparente/Cinza Transitions®",
+                tratamento: "Transitions®",
+                tamanho: "53 22 mm",
+                alturaLente: "43.6 mm",
+                comprimentoHaste: "155 mm",
+                categoriaLente: "3F",
+                imagens: ["geracaodois/wayfarer/azulOce1.avif", "geracaodois/wayfarer/azulOce2.avif","geracaodois/wayfarer/azulOce3.avif","geracaodois/wayfarer/azulOce4.avif","geracaodois/wayfarer/azulOce5.avif"]
             },
-            "Preto Brilhante ": {
-                codModelo: "RW4012 601/71-T 50-22",
-                corArmacao: "Preto Brilhante ",
-                imagens: [
-                    "brilhantew1.png", // Imagem 1 (Principal)
-                    "brilhantew2.webp", // Imagem 2
-                    "brilhantew3.webp", // Imagem 3
-                    "brilhantew4.webp", // Imagem 4
-                    "brilhantew5.webp" // Imagem 5 (Usando imagem de outra cor como exemplo)
-                ]
+            "Polido Preto": {
+                codModelo: "RW4011 601/9A 53-22",
+                corArmacao: "Polido Preto",
+                lente: "Verde polarizado",
+                tratamento: "Cor uniforme",
+                tamanho: "53 22 mm",
+                alturaLente: "43.6 mm",
+                comprimentoHaste: "155 mm",
+                categoriaLente: "3P",
+                imagens: ["geracaodois/wayfarer/plpreto1.avif", "geracaodois/wayfarer/plpreto2.avif", "geracaodois/wayfarer/plpreto3.avif", "geracaodois/wayfarer/plpreto4.avif", "geracaodois/wayfarer/plpreto1.avif   "]
+            },
+            "Polido Havana": {
+                codModelo: "RW4011 690571 53-22",
+                corArmacao: "Polido Havana",
+                lente: "Verde G-15",
+                tratamento: "Cor uniforme",
+                tamanho: "53 22 mm",
+                alturaLente: "43.6 mm",
+                comprimentoHaste: "155 mm",
+                categoriaLente: "3N",
+                imagens: ["geracaodois/wayfarer/havana1.avif", "geracaodois/wayfarer/havana2.avif", "geracaodois/wayfarer/havana3.avif", "geracaodois/wayfarer/havana4.avif", "geracaodois/wayfarer/havana5.avif"]
+            },
+            "Polido Preto Transparente": {
+                codModelo: "RW4011 690680 53-22",
+                corArmacao: "Polido Preto transparente",
+                lente: "Transparente/Cinza Transitions®",
+                tratamento: "Transitions®",
+                tamanho: "53 22 mm",
+                alturaLente: "43.6 mm",
+                comprimentoHaste: "155 mm",
+                categoriaLente: "3F",
+                imagens: ["geracaodois/wayfarer/preto1.avif", "geracaodois/wayfarer/preto2.avif", "geracaodois/wayfarer/preto3.avif", "geracaodois/wayfarer/preto4.avif", "geracaodois/wayfarer/preto5.avif"]
+            },
+            "Polido Preto e Verde": {
+                codModelo: "RW4011 601/9A 53-22",
+                corArmacao: "Polido Preto",
+                lente: "Verde polarizado",
+                tratamento: "Cor uniforme",
+                tamanho: "53 22 mm",
+                alturaLente: "43.6 mm",
+                comprimentoHaste: "155 mm",
+                categoriaLente: "3P",
+                imagens: ["geracaodois/wayfarer/verde1.webp", "geracaodois/wayfarer/verde2.avif", "geracaodois/wayfarer/verde3.avif", "geracaodois/wayfarer/verde4.avif", "geracaodois/wayfarer/verde5.avif"]
+            },
+            "Preto Transparente": {
+                codModelo: "RW4011 601S1M 53-22",
+                corArmacao: "Fosco Preto",
+                lente: "Transparente/Verde Transitions®",
+                tratamento: "Transitions®",
+                tamanho: "53 22 mm",
+                alturaLente: "43.6 mm",
+                comprimentoHaste: "155 mm",
+                categoriaLente: "3F",
+                imagens: ["geracaodois/wayfarer/verdetr1.avif", "geracaodois/wayfarer/verdetr2.avif", "geracaodois/wayfarer/verdetr3.avif", "geracaodois/wayfarer/verdetr4.avif", "geracaodois/wayfarer/verdetr5.avif"]
+            },
+            "Preto Transparente Aquamarine": {
+                codModelo: "RW4011 690680 53-22",
+                corArmacao: "Polido Preto transparente",
+                lente: "Transparente/Aquamarine Transitions®",
+                tratamento: "Transitions®",
+                tamanho: "53 22 mm",
+                alturaLente: "43.6 mm",
+                comprimentoHaste: "155 mm",
+                categoriaLente: "3F",
+                imagens: ["aquamarine1.webp", "aquamarine2.webp", "aquamarine3.webp", "aquamarine4.webp", "aquamarine5.webp"]
             }
-            // Adicione outras cores aqui se tiver mais de 3
         };
 
         let corAtual = "Fosco Preto";
@@ -465,7 +536,7 @@
 
                 // A. Atualiza o texto na Info Principal (Cor)
                 document.getElementById('cor-selecionada-nome').textContent = corNomeCompleto;
-                // B. A lente e cor de lente permanecem fixas (Verificar lentes disponíveis)
+                document.getElementById('lente-selecionada-nome').textContent = data.lente;
 
                 // C. Atualiza os links do WhatsApp
                 const linkComprar = document.getElementById('btn-comprar');
