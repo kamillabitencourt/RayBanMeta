@@ -629,3 +629,29 @@ imagem-principal-container {
     outline-color: #000000;
 }
 }
+/* Botão "Verificar lentes" */
+.btn-verificar-lentes {
+    display: block;
+    width: 85%;
+    padding: 10px 20px;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    color: #000000;
+    background: #ffffff;
+    text-align: center;
+    font-size: 0.8em;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-verificar-lentes:hover {
+    background: #000000;
+    color: #ffffff;
+    opacity: 1;
+}
+
+@media (max-width: 900px) {
+    .btn-verificar-lentes {
+        margin: 0 auto;
+    }
+}
