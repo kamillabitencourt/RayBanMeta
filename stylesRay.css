@@ -18,6 +18,45 @@ body {
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
 }
+.seletor-modelo {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.modelo-pill {
+    padding: 10px 20px;
+    border: 1px solid #d0d0d0;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #1c1e21;
+    text-decoration: none;
+    background: #fff;
+    transition: border-color .2s, background .2s, color .2s;
+}
+
+.modelo-pill:hover {
+    border-color: #1c1e21;
+}
+
+.modelo-pill.ativo {
+    background: #1c1e21;
+    border-color: #1c1e21;
+    color: #fff;
+    pointer-events: none;
+}
+
+@media (max-width: 600px) {
+    .seletor-modelo {
+        gap: 6px;
+    }
+    .modelo-pill {
+        padding: 9px 16px;
+        font-size: 13px;
+    }
+}
 a {
     text-decoration: none;
     color: inherit;

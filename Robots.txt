@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://raybanmeta.mercadotica.com/sitemap.xml
